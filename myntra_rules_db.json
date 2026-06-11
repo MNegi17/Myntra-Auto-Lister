@@ -1,0 +1,1270 @@
+{
+    "apparel_defaults": {
+        "brand": "Purple United Kids",
+        "Manufacturer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041.",
+        "Packer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041."
+    },
+    "footwear_defaults": {
+        "Manufacturer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041.",
+        "Packer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041."
+    },
+    "apparel_sizecharts": {
+        "BOYS T-SHIRT": {
+            "0-6M": {
+                "TOTAL LENGTH": 12.992133,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "Front Length": 12.992133,
+                "Chest  (all round)": 21.259854
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 13.385834000000001,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 8.661422,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "Front Length": 13.385834000000001,
+                "Chest  (all round)": 22.047256
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 13.779535000000001,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 9.055123,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "Front Length": 13.779535000000001,
+                "Chest  (all round)": 22.834658
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 14.173236000000001,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.448824,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "Front Length": 14.173236000000001,
+                "Chest  (all round)": 23.62206
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 16.141741,
+                "HALF CHEST": 12.204731,
+                "ACROSS SHOULDER": 9.842525,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "Front Length": 16.141741,
+                "Chest  (all round)": 24.409462
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 16.929143,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "Front Length": 16.929143,
+                "Chest  (all round)": 26.771668000000002
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 17.716545,
+                "HALF CHEST": 14.566937000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "Front Length": 17.716545,
+                "Chest  (all round)": 29.133874000000002
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 18.503947,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 13.385834000000001,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "Front Length": 18.503947,
+                "Chest  (all round)": 31.496080000000003
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 19.291349,
+                "HALF CHEST": 16.929143,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "Front Length": 19.291349,
+                "Chest  (all round)": 33.858286
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 20.078751,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.748040000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "Front Length": 20.078751,
+                "Chest  (all round)": 36.220492
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 20.866153,
+                "HALF CHEST": 19.291349,
+                "ACROSS SHOULDER": 16.929143,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "Front Length": 20.866153,
+                "Chest  (all round)": 38.582698
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 21.653555,
+                "HALF CHEST": 20.472452,
+                "ACROSS SHOULDER": 18.110246,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "Front Length": 21.653555,
+                "Chest  (all round)": 40.944904
+            }
+        },
+        "BOYS LOWER /JOGGER": {
+            "0-6M": {
+                "TOTAL LENGTH": 13.385834000000001,
+                "HALF WAIST": 7.480319000000001,
+                "HIP WIDTH": 10.629927,
+                "INSEAM LENGTH": 6.299216,
+                "Garment Waist (all round)": 16.141741,
+                "To Fit Waist  (all round)": 14.960638000000001
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 14.173236000000001,
+                "HALF WAIST": 7.874020000000001,
+                "HIP WIDTH": 11.023628,
+                "INSEAM LENGTH": 6.6929170000000004,
+                "Garment Waist (all round)": 16.929143,
+                "To Fit Waist  (all round)": 15.748040000000001
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 14.960638000000001,
+                "HALF WAIST": 8.267721,
+                "HIP WIDTH": 11.417329,
+                "INSEAM LENGTH": 7.0866180000000005,
+                "Garment Waist (all round)": 17.716545,
+                "To Fit Waist  (all round)": 16.535442
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 15.748040000000001,
+                "HALF WAIST": 8.661422,
+                "HIP WIDTH": 11.81103,
+                "INSEAM LENGTH": 7.480319000000001,
+                "Garment Waist (all round)": 18.503947,
+                "To Fit Waist  (all round)": 17.322844
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 22.440957,
+                "HALF WAIST": 8.661422,
+                "HIP WIDTH": 12.598432,
+                "INSEAM LENGTH": 12.598432,
+                "Garment Waist (all round)": 18.503947,
+                "To Fit Waist  (all round)": 17.322844
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 24.015761,
+                "HALF WAIST": 9.448824,
+                "HIP WIDTH": 12.992133,
+                "INSEAM LENGTH": 13.1889835,
+                "Garment Waist (all round)": 20.078751,
+                "To Fit Waist  (all round)": 18.897648
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 25.590565,
+                "HALF WAIST": 9.842525,
+                "HIP WIDTH": 13.385834000000001,
+                "INSEAM LENGTH": 14.370086500000001,
+                "Garment Waist (all round)": 20.866153,
+                "To Fit Waist  (all round)": 19.68505
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 27.165369000000002,
+                "HALF WAIST": 10.236226,
+                "HIP WIDTH": 13.779535000000001,
+                "INSEAM LENGTH": 15.748040000000001,
+                "Garment Waist (all round)": 21.653555,
+                "To Fit Waist  (all round)": 20.472452
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 28.740173000000002,
+                "HALF WAIST": 11.023628,
+                "HIP WIDTH": 14.173236000000001,
+                "INSEAM LENGTH": 16.929143,
+                "Garment Waist (all round)": 23.228359,
+                "To Fit Waist  (all round)": 22.047256
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 31.102379000000003,
+                "HALF WAIST": 11.81103,
+                "HIP WIDTH": 14.566937000000001,
+                "INSEAM LENGTH": 18.897648,
+                "Garment Waist (all round)": 24.803163,
+                "To Fit Waist  (all round)": 23.62206
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 34.251987,
+                "HALF WAIST": 12.598432,
+                "HIP WIDTH": 14.960638000000001,
+                "INSEAM LENGTH": 21.653555,
+                "Garment Waist (all round)": 26.377967,
+                "To Fit Waist  (all round)": 25.196864
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 37.401595,
+                "HALF WAIST": 13.385834000000001,
+                "HIP WIDTH": 15.354339000000001,
+                "INSEAM LENGTH": 24.409462,
+                "Garment Waist (all round)": 27.952771000000002,
+                "To Fit Waist  (all round)": 26.771668000000002
+            }
+        },
+        "ROMPERS": {
+            "0-6M": {
+                "Across Shoulder": 7.874020000000001,
+                "Chest": 21.259854,
+                "Front Length": 17.322844,
+                "Inseam Length": 3.149608
+            },
+            "6-12M": {
+                "Across Shoulder": 8.267721,
+                "Chest": 22.047256,
+                "Front Length": 18.503947,
+                "Inseam Length": 3.5433090000000003
+            },
+            "12-18M": {
+                "Across Shoulder": 8.661422,
+                "Chest": 22.834658,
+                "Front Length": 19.68505,
+                "Inseam Length": 3.9370100000000003
+            },
+            "18-24M": {
+                "Across Shoulder": 9.055123,
+                "Chest": 23.62206,
+                "Front Length": 20.866153,
+                "Inseam Length": 4.330711
+            }
+        },
+        "BOYS SHIRT": {
+            "0-6M": {
+                "TOTAL LENGTH": 12.992133,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "Front Length": 13.779535000000001,
+                "Chest  (all round )": 21.259854
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 13.385834000000001,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 8.661422,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "Front Length": 14.173236000000001,
+                "Chest  (all round )": 22.047256
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 13.779535000000001,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 9.055123,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "Front Length": 14.566937000000001,
+                "Chest  (all round )": 22.834658
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 14.173236000000001,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.448824,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "Front Length": 14.960638000000001,
+                "Chest  (all round )": 23.62206
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 16.141741,
+                "HALF CHEST": 12.204731,
+                "ACROSS SHOULDER": 9.842525,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "Front Length": 16.929143,
+                "Chest  (all round )": 24.409462
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 16.929143,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "Front Length": 17.716545,
+                "Chest  (all round )": 26.771668000000002
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 17.716545,
+                "HALF CHEST": 14.566937000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "Front Length": 18.503947,
+                "Chest  (all round )": 29.133874000000002
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 18.503947,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 13.385834000000001,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "Front Length": 19.291349,
+                "Chest  (all round )": 31.496080000000003
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 19.291349,
+                "HALF CHEST": 16.929143,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "Front Length": 20.078751,
+                "Chest  (all round )": 33.858286
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 20.078751,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.748040000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "Front Length": 20.866153,
+                "Chest  (all round )": 36.220492
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 20.866153,
+                "HALF CHEST": 19.291349,
+                "ACROSS SHOULDER": 16.929143,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "Front Length": 21.653555,
+                "Chest  (all round )": 38.582698
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 21.653555,
+                "HALF CHEST": 20.472452,
+                "ACROSS SHOULDER": 18.110246,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "Front Length": 22.440957,
+                "Chest  (all round )": 40.944904
+            }
+        },
+        "BOYS SHORTS": {
+            "0-6M": {
+                "TOTAL LENGTH": 8.267721,
+                "HALF WAIST": 7.874020000000001,
+                "HIP WIDTH": 10.629927,
+                "INSEAM LENGTH": 1.181103,
+                "Garment Waist (all round)": 16.929143,
+                "Inseam Length": 1.574804,
+                "To Fit Waist  (all round)": 15.748040000000001
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 8.661422,
+                "HALF WAIST": 8.267721,
+                "HIP WIDTH": 11.023628,
+                "INSEAM LENGTH": 1.3779535,
+                "Garment Waist (all round)": 17.716545,
+                "Inseam Length": 1.9685050000000002,
+                "To Fit Waist  (all round)": 16.535442
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 9.055123,
+                "HALF WAIST": 8.661422,
+                "HIP WIDTH": 11.417329,
+                "INSEAM LENGTH": 1.574804,
+                "Garment Waist (all round)": 18.503947,
+                "Inseam Length": 2.362206,
+                "To Fit Waist  (all round)": 17.322844
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 9.448824,
+                "HALF WAIST": 9.055123,
+                "HIP WIDTH": 11.81103,
+                "INSEAM LENGTH": 1.7716545000000001,
+                "Garment Waist (all round)": 19.291349,
+                "Inseam Length": 2.755907,
+                "To Fit Waist  (all round)": 18.110246
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 10.236226,
+                "HALF WAIST": 9.842525,
+                "HIP WIDTH": 12.598432,
+                "INSEAM LENGTH": 2.362206,
+                "Garment Waist (all round)": 20.866153,
+                "Inseam Length": 3.5433090000000003,
+                "To Fit Waist  (all round)": 19.68505
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 11.023628,
+                "HALF WAIST": 10.629927,
+                "HIP WIDTH": 12.992133,
+                "INSEAM LENGTH": 2.755907,
+                "Garment Waist (all round)": 22.440957,
+                "Inseam Length": 4.330711,
+                "To Fit Waist  (all round)": 21.259854
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 11.81103,
+                "HALF WAIST": 11.023628,
+                "HIP WIDTH": 13.385834000000001,
+                "INSEAM LENGTH": 2.9527575,
+                "Garment Waist (all round)": 23.228359,
+                "Inseam Length": 5.118113,
+                "To Fit Waist  (all round)": 22.047256
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 12.598432,
+                "HALF WAIST": 11.417329,
+                "HIP WIDTH": 13.779535000000001,
+                "INSEAM LENGTH": 3.149608,
+                "Garment Waist (all round)": 24.015761,
+                "Inseam Length": 5.905515,
+                "To Fit Waist  (all round)": 22.834658
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 14.173236000000001,
+                "HALF WAIST": 12.204731,
+                "HIP WIDTH": 14.173236000000001,
+                "INSEAM LENGTH": 3.3464585000000002,
+                "Garment Waist (all round)": 25.590565,
+                "Inseam Length": 7.480319000000001,
+                "To Fit Waist  (all round)": 24.409462
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 16.535442,
+                "HALF WAIST": 12.992133,
+                "HIP WIDTH": 14.566937000000001,
+                "INSEAM LENGTH": 3.5433090000000003,
+                "Garment Waist (all round)": 27.165369000000002,
+                "Inseam Length": 9.842525,
+                "To Fit Waist  (all round)": 25.984266
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 19.68505,
+                "HALF WAIST": 13.779535000000001,
+                "HIP WIDTH": 14.960638000000001,
+                "INSEAM LENGTH": 3.7401595000000003,
+                "Garment Waist (all round)": 28.740173000000002,
+                "Inseam Length": 12.992133,
+                "To Fit Waist  (all round)": 27.559070000000002
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 22.834658,
+                "HALF WAIST": 14.566937000000001,
+                "HIP WIDTH": 15.354339000000001,
+                "INSEAM LENGTH": 3.9370100000000003,
+                "Garment Waist (all round)": 30.314977000000003,
+                "Inseam Length": 16.141741,
+                "To Fit Waist  (all round)": 29.133874000000002
+            }
+        },
+        "GIRLS  TOP": {
+            "0-6M": {
+                "TOTAL LENGTH": 11.81103,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 7.874020000000001,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "Front Length": 11.81103,
+                "Chest (all round)": 21.259854
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 12.204731,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "Front Length": 12.204731,
+                "Chest (all round)": 22.047256
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 12.598432,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 8.661422,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "Front Length": 12.598432,
+                "Chest (all round)": 22.834658
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 12.992133,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.055123,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "Front Length": 12.992133,
+                "Chest (all round)": 23.62206
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 14.960638000000001,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 10.629927,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "Front Length": 14.960638000000001,
+                "Chest (all round)": 26.771668000000002
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 15.748040000000001,
+                "HALF CHEST": 13.779535000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "Front Length": 15.748040000000001,
+                "Chest (all round)": 27.559070000000002
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 16.535442,
+                "HALF CHEST": 14.173236000000001,
+                "ACROSS SHOULDER": 11.417329,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "Front Length": 16.535442,
+                "Chest (all round)": 28.346472000000002
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 17.322844,
+                "HALF CHEST": 14.960638000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "Front Length": 17.322844,
+                "Chest (all round)": 29.921276000000002
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 18.110246,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 12.992133,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "Front Length": 18.110246,
+                "Chest (all round)": 31.496080000000003
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 18.897648,
+                "HALF CHEST": 16.535442,
+                "ACROSS SHOULDER": 13.779535000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "Front Length": 18.897648,
+                "Chest (all round)": 33.070884
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 19.68505,
+                "HALF CHEST": 17.322844,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "Front Length": 19.68505,
+                "Chest (all round)": 34.645688
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 20.472452,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.354339000000001,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "Front Length": 20.472452,
+                "Chest (all round)": 36.220492
+            }
+        },
+        "CLOTHING SET": {
+            "0-6M": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 12.204731,
+                "HALF CHEST": 11.023628,
+                "WAIST ( LOWER BODY WEAR )": 7.874020000000001,
+                "LENGTH (LOWER WEAR )": 14.173236000000001,
+                "Front Length": 12.204731,
+                "Chest (all round)": 22.047256,
+                "Outseam Length (all round)": 12.204731
+            },
+            "6-12M": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 12.992133,
+                "HALF CHEST": 11.81103,
+                "WAIST ( LOWER BODY WEAR )": 8.267721,
+                "LENGTH (LOWER WEAR )": 16.141741,
+                "Front Length": 12.992133,
+                "Chest (all round)": 23.62206,
+                "Outseam Length (all round)": 12.992133
+            },
+            "12-18M": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 13.779535000000001,
+                "HALF CHEST": 12.598432,
+                "WAIST ( LOWER BODY WEAR )": 8.661422,
+                "LENGTH (LOWER WEAR )": 18.110246,
+                "Front Length": 13.779535000000001,
+                "Chest (all round)": 25.196864,
+                "Outseam Length (all round)": 13.779535000000001
+            },
+            "18-24M": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 14.566937000000001,
+                "HALF CHEST": 13.385834000000001,
+                "WAIST ( LOWER BODY WEAR )": 9.055123,
+                "LENGTH (LOWER WEAR )": 20.078751,
+                "Front Length": 14.566937000000001,
+                "Chest (all round)": 26.771668000000002,
+                "Outseam Length (all round)": 14.566937000000001
+            },
+            "2-3Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 15.354339000000001,
+                "HALF CHEST": 14.173236000000001,
+                "WAIST ( LOWER BODY WEAR )": 9.448824,
+                "LENGTH (LOWER WEAR )": 22.047256,
+                "Front Length": 15.354339000000001,
+                "Chest (all round)": 28.346472000000002,
+                "Outseam Length (all round)": 15.354339000000001
+            },
+            "3-4Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 16.141741,
+                "HALF CHEST": 14.960638000000001,
+                "WAIST ( LOWER BODY WEAR )": 9.842525,
+                "LENGTH (LOWER WEAR )": 24.015761,
+                "Front Length": 16.141741,
+                "Chest (all round)": 29.921276000000002,
+                "Outseam Length (all round)": 16.141741
+            },
+            "4-5Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 16.929143,
+                "HALF CHEST": 15.748040000000001,
+                "WAIST ( LOWER BODY WEAR )": 10.236226,
+                "LENGTH (LOWER WEAR )": 25.590565,
+                "Front Length": 16.929143,
+                "Chest (all round)": 31.496080000000003,
+                "Outseam Length (all round)": 16.929143
+            },
+            "5-6Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 17.716545,
+                "HALF CHEST": 16.535442,
+                "WAIST ( LOWER BODY WEAR )": 10.629927,
+                "LENGTH (LOWER WEAR )": 27.165369000000002,
+                "Front Length": 17.716545,
+                "Chest (all round)": 33.070884,
+                "Outseam Length (all round)": 17.716545
+            },
+            "7-8Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 18.503947,
+                "HALF CHEST": 17.716545,
+                "WAIST ( LOWER BODY WEAR )": 11.417329,
+                "LENGTH (LOWER WEAR )": 28.740173000000002,
+                "Front Length": 18.503947,
+                "Chest (all round)": 35.43309,
+                "Outseam Length (all round)": 18.503947
+            },
+            "9-10Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 19.291349,
+                "HALF CHEST": 18.897648,
+                "WAIST ( LOWER BODY WEAR )": 12.204731,
+                "LENGTH (LOWER WEAR )": 30.314977000000003,
+                "Front Length": 19.291349,
+                "Chest (all round)": 37.795296,
+                "Outseam Length (all round)": 19.291349
+            },
+            "11-12Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 20.078751,
+                "HALF CHEST": 20.078751,
+                "WAIST ( LOWER BODY WEAR )": 12.992133,
+                "LENGTH (LOWER WEAR )": 33.464585,
+                "Front Length": 20.078751,
+                "Chest (all round)": 40.157502,
+                "Outseam Length (all round)": 20.078751
+            },
+            "13-14Y": {
+                "TOTAL LENGTH  (UPPER BODY WEAR)": 20.866153,
+                "HALF CHEST": 21.259854,
+                "WAIST ( LOWER BODY WEAR )": 13.779535000000001,
+                "LENGTH (LOWER WEAR )": 36.614193,
+                "Front Length": 20.866153,
+                "Chest (all round)": 42.519708,
+                "Outseam Length (all round)": 20.866153
+            }
+        },
+        "GIRLS  DRESS": {
+            "0-6M": {
+                "TOTAL LENGTH": 15.354339000000001,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 7.874020000000001,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "Front Length": 15.354339000000001,
+                "Chest (all round)": 21.259854,
+                "Hips": 25.196864,
+                "Waist": 19.68505
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 16.535442,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "Front Length": 16.535442,
+                "Chest (all round)": 22.047256,
+                "Hips": 25.984266,
+                "Waist": 20.472452
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 17.716545,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 8.661422,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "Front Length": 17.716545,
+                "Chest (all round)": 22.834658,
+                "Hips": 26.771668000000002,
+                "Waist": 21.259854
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 18.897648,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.055123,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "Front Length": 18.897648,
+                "Chest (all round)": 23.62206,
+                "Hips": 27.559070000000002,
+                "Waist": 22.047256
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 22.440957,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 10.629927,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "Front Length": 22.440957,
+                "Chest (all round)": 26.771668000000002,
+                "Hips": 30.708678000000003,
+                "Waist": 25.196864
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 23.228359,
+                "HALF CHEST": 13.779535000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "Front Length": 23.228359,
+                "Chest (all round)": 27.559070000000002,
+                "Hips": 31.496080000000003,
+                "Waist": 25.984266
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 24.015761,
+                "HALF CHEST": 14.173236000000001,
+                "ACROSS SHOULDER": 11.417329,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "Front Length": 24.015761,
+                "Chest (all round)": 28.346472000000002,
+                "Hips": 32.283482,
+                "Waist": 26.771668000000002
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 25.590565,
+                "HALF CHEST": 14.960638000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "Front Length": 25.590565,
+                "Chest (all round)": 29.921276000000002,
+                "Hips": 33.858286,
+                "Waist": 28.346472000000002
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 27.165369000000002,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 12.992133,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "Front Length": 27.165369000000002,
+                "Chest (all round)": 31.496080000000003,
+                "Hips": 35.43309,
+                "Waist": 29.921276000000002
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 30.314977000000003,
+                "HALF CHEST": 16.535442,
+                "ACROSS SHOULDER": 13.779535000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "Front Length": 30.314977000000003,
+                "Chest (all round)": 33.070884,
+                "Hips": 37.007894,
+                "Waist": 31.496080000000003
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 33.464585,
+                "HALF CHEST": 17.322844,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "Front Length": 33.464585,
+                "Chest (all round)": 34.645688,
+                "Hips": 38.582698,
+                "Waist": 33.070884
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 36.614193,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.354339000000001,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "Front Length": 36.614193,
+                "Chest (all round)": 36.220492,
+                "Hips": 40.157502,
+                "Waist": 34.645688
+            }
+        },
+        "GIRLS FULL LENGTH DUNGAREE": {
+            "0-6M": {
+                "TOTAL LENGTH": 18.897648,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 7.874020000000001,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "INSEAM LENGTH": 5.511814,
+                "Garment Waist": 20.078751,
+                "To Fit Waist": 19.291349
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 20.472452,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "INSEAM LENGTH": 5.905515,
+                "Garment Waist": 20.866153,
+                "To Fit Waist": 20.866153
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 22.047256,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 8.661422,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "INSEAM LENGTH": 6.299216,
+                "Garment Waist": 21.653555,
+                "To Fit Waist": 22.440957
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 23.62206,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.055123,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "INSEAM LENGTH": 6.6929170000000004,
+                "Garment Waist": 22.440957,
+                "To Fit Waist": 24.015761
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 34.645688,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 10.629927,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "INSEAM LENGTH": 16.929143,
+                "Garment Waist": 25.590565,
+                "To Fit Waist": 27.165369000000002
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 35.43309,
+                "HALF CHEST": 13.779535000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "INSEAM LENGTH": 17.322844,
+                "Garment Waist": 26.377967,
+                "To Fit Waist": 28.740173000000002
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 36.220492,
+                "HALF CHEST": 14.173236000000001,
+                "ACROSS SHOULDER": 11.417329,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "INSEAM LENGTH": 17.716545,
+                "Garment Waist": 27.165369000000002,
+                "To Fit Waist": 30.314977000000003
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 37.795296,
+                "HALF CHEST": 14.960638000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "INSEAM LENGTH": 18.110246,
+                "Garment Waist": 28.740173000000002,
+                "To Fit Waist": 31.889781000000003
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 39.3701,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 12.992133,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "INSEAM LENGTH": 18.503947,
+                "Garment Waist": 30.314977000000003,
+                "To Fit Waist": 35.039389
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 42.519708,
+                "HALF CHEST": 16.535442,
+                "ACROSS SHOULDER": 13.779535000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "INSEAM LENGTH": 20.078751,
+                "Garment Waist": 31.889781000000003,
+                "To Fit Waist": 38.188997
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 45.669316,
+                "HALF CHEST": 17.322844,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "INSEAM LENGTH": 21.653555,
+                "Garment Waist": 33.464585,
+                "To Fit Waist": 41.338605
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 48.818924,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.354339000000001,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "INSEAM LENGTH": 23.228359,
+                "Garment Waist": 35.039389,
+                "To Fit Waist": 44.488213
+            }
+        },
+        "DRESS LENGTH DUNGAREE": {
+            "0-6M": {
+                "TOTAL LENGTH": 15.354339000000001,
+                "HALF WAIST": 9.842525,
+                "ACROSS SHOULDER": 7.0866180000000005,
+                "FULL SLEEVE LENGTH": 10.236226,
+                "Garment Waist (all round)": 19.68505,
+                "To Fit Waist (all round)": 19.68505
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 16.535442,
+                "HALF WAIST": 10.236226,
+                "ACROSS SHOULDER": 7.480319000000001,
+                "FULL SLEEVE LENGTH": 11.023628,
+                "Garment Waist (all round)": 20.472452,
+                "To Fit Waist (all round)": 20.472452
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 17.716545,
+                "HALF WAIST": 10.629927,
+                "ACROSS SHOULDER": 7.874020000000001,
+                "FULL SLEEVE LENGTH": 11.81103,
+                "Garment Waist (all round)": 21.259854,
+                "To Fit Waist (all round)": 21.259854
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 18.897648,
+                "HALF WAIST": 11.023628,
+                "ACROSS SHOULDER": 8.267721,
+                "FULL SLEEVE LENGTH": 12.598432,
+                "Garment Waist (all round)": 22.047256,
+                "To Fit Waist (all round)": 22.047256
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 22.440957,
+                "HALF WAIST": 12.204731,
+                "ACROSS SHOULDER": 9.448824,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "Garment Waist (all round)": 24.409462,
+                "To Fit Waist (all round)": 24.409462
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 23.228359,
+                "HALF WAIST": 12.598432,
+                "ACROSS SHOULDER": 9.842525,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "Garment Waist (all round)": 25.196864,
+                "To Fit Waist (all round)": 25.196864
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 24.015761,
+                "HALF WAIST": 12.992133,
+                "ACROSS SHOULDER": 10.236226,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "Garment Waist (all round)": 25.984266,
+                "To Fit Waist (all round)": 25.984266
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 25.590565,
+                "HALF WAIST": 13.385834000000001,
+                "ACROSS SHOULDER": 10.629927,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "Garment Waist (all round)": 26.771668000000002,
+                "To Fit Waist (all round)": 26.771668000000002
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 27.165369000000002,
+                "HALF WAIST": 14.173236000000001,
+                "ACROSS SHOULDER": 11.417329,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "Garment Waist (all round)": 28.346472000000002,
+                "To Fit Waist (all round)": 28.346472000000002
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 30.314977000000003,
+                "HALF WAIST": 14.960638000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "Garment Waist (all round)": 29.921276000000002,
+                "To Fit Waist (all round)": 29.921276000000002
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 33.464585,
+                "HALF WAIST": 15.748040000000001,
+                "ACROSS SHOULDER": 12.992133,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "Garment Waist (all round)": 31.496080000000003,
+                "To Fit Waist (all round)": 31.496080000000003
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 36.614193,
+                "HALF WAIST": 16.535442,
+                "ACROSS SHOULDER": 13.779535000000001,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "Garment Waist (all round)": 33.070884,
+                "To Fit Waist (all round)": 33.070884
+            }
+        },
+        "GIRLS  JUMPSUIT": {
+            "0-6M": {
+                "TOTAL LENGTH": 14.960638000000001,
+                "HALF CHEST": 10.629927,
+                "ACROSS SHOULDER": 8.661422,
+                "INSEAM LENGTH": 3.149608,
+                "Chest (all round)": 21.259854,
+                "To Fit Waist  (all round)": 20.472452
+            },
+            "6-12M": {
+                "TOTAL LENGTH": 15.748040000000001,
+                "HALF CHEST": 11.023628,
+                "ACROSS SHOULDER": 9.055123,
+                "INSEAM LENGTH": 3.5433090000000003,
+                "Chest (all round)": 22.047256,
+                "To Fit Waist  (all round)": 21.259854
+            },
+            "12-18M": {
+                "TOTAL LENGTH": 16.535442,
+                "HALF CHEST": 11.417329,
+                "ACROSS SHOULDER": 9.448824,
+                "INSEAM LENGTH": 3.9370100000000003,
+                "Chest (all round)": 22.834658,
+                "To Fit Waist  (all round)": 22.047256
+            },
+            "18-24M": {
+                "TOTAL LENGTH": 17.322844,
+                "HALF CHEST": 11.81103,
+                "ACROSS SHOULDER": 9.842525,
+                "INSEAM LENGTH": 4.330711,
+                "Chest (all round)": 23.62206,
+                "To Fit Waist  (all round)": 22.834658
+            },
+            "2-3Y": {
+                "TOTAL LENGTH": 34.645688,
+                "HALF CHEST": 13.385834000000001,
+                "ACROSS SHOULDER": 10.629927,
+                "FULL SLEEVE LENGTH": 14.173236000000001,
+                "INSEAM LENGTH": 16.929143,
+                "Chest (all round)": 26.771668000000002,
+                "To Fit Waist  (all round)": 24.409462
+            },
+            "3-4Y": {
+                "TOTAL LENGTH": 35.43309,
+                "HALF CHEST": 13.779535000000001,
+                "ACROSS SHOULDER": 11.023628,
+                "FULL SLEEVE LENGTH": 14.960638000000001,
+                "INSEAM LENGTH": 17.322844,
+                "Chest (all round)": 27.559070000000002,
+                "To Fit Waist  (all round)": 25.196864
+            },
+            "4-5Y": {
+                "TOTAL LENGTH": 36.220492,
+                "HALF CHEST": 14.173236000000001,
+                "ACROSS SHOULDER": 11.417329,
+                "FULL SLEEVE LENGTH": 15.748040000000001,
+                "INSEAM LENGTH": 17.716545,
+                "Chest (all round)": 28.346472000000002,
+                "To Fit Waist  (all round)": 25.984266
+            },
+            "5-6Y": {
+                "TOTAL LENGTH": 37.795296,
+                "HALF CHEST": 14.960638000000001,
+                "ACROSS SHOULDER": 12.204731,
+                "FULL SLEEVE LENGTH": 16.535442,
+                "INSEAM LENGTH": 18.110246,
+                "Chest (all round)": 29.921276000000002,
+                "To Fit Waist  (all round)": 27.559070000000002
+            },
+            "7-8Y": {
+                "TOTAL LENGTH": 39.3701,
+                "HALF CHEST": 15.748040000000001,
+                "ACROSS SHOULDER": 12.992133,
+                "FULL SLEEVE LENGTH": 18.110246,
+                "INSEAM LENGTH": 18.503947,
+                "Chest (all round)": 31.496080000000003,
+                "To Fit Waist  (all round)": 29.133874000000002
+            },
+            "9-10Y": {
+                "TOTAL LENGTH": 42.519708,
+                "HALF CHEST": 16.535442,
+                "ACROSS SHOULDER": 13.779535000000001,
+                "FULL SLEEVE LENGTH": 19.68505,
+                "INSEAM LENGTH": 20.078751,
+                "Chest (all round)": 33.070884,
+                "To Fit Waist  (all round)": 30.708678000000003
+            },
+            "11-12Y": {
+                "TOTAL LENGTH": 45.669316,
+                "HALF CHEST": 17.322844,
+                "ACROSS SHOULDER": 14.566937000000001,
+                "FULL SLEEVE LENGTH": 21.259854,
+                "INSEAM LENGTH": 21.653555,
+                "Chest (all round)": 34.645688,
+                "To Fit Waist  (all round)": 32.283482
+            },
+            "13-14Y": {
+                "TOTAL LENGTH": 48.818924,
+                "HALF CHEST": 18.110246,
+                "ACROSS SHOULDER": 15.354339000000001,
+                "FULL SLEEVE LENGTH": 22.834658,
+                "INSEAM LENGTH": 23.228359,
+                "Chest (all round)": 36.220492,
+                "To Fit Waist  (all round)": 33.858286
+            }
+        },
+        "JACKET": {
+            "0-6M": {
+                "Across Shoulder ( Inches )": 8.661422,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 22.047256,
+                "Front Length ( Inches )": 12.204731
+            },
+            "6-12M": {
+                "Across Shoulder ( Inches )": 9.448824,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 23.62206,
+                "Front Length ( Inches )": 12.992133
+            },
+            "12-18M": {
+                "Across Shoulder ( Inches )": 10.236226,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 25.196864,
+                "Front Length ( Inches )": 13.779535000000001
+            },
+            "18-24M": {
+                "Across Shoulder ( Inches )": 11.023628,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 26.771668000000002,
+                "Front Length ( Inches )": 14.566937000000001
+            },
+            "2-3Y": {
+                "Across Shoulder ( Inches )": 11.81103,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 28.346472000000002,
+                "Front Length ( Inches )": 15.354339000000001
+            },
+            "3-4Y": {
+                "Across Shoulder ( Inches )": 12.598432,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 29.921276000000002,
+                "Front Length ( Inches )": 16.141741
+            },
+            "4-5Y": {
+                "Across Shoulder ( Inches )": 13.385834000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 31.496080000000003,
+                "Front Length ( Inches )": 16.929143
+            },
+            "5-6Y": {
+                "Across Shoulder ( Inches )": 14.173236000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 33.070884,
+                "Front Length ( Inches )": 17.716545
+            },
+            "7-8Y": {
+                "Across Shoulder ( Inches )": 15.354339000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 35.43309,
+                "Front Length ( Inches )": 18.503947
+            },
+            "9-10Y": {
+                "Across Shoulder ( Inches )": 16.535442,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 37.795296,
+                "Front Length ( Inches )": 19.291349
+            },
+            "11-12Y": {
+                "Across Shoulder ( Inches )": 17.716545,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 40.157502,
+                "Front Length ( Inches )": 20.078751
+            },
+            "13-14Y": {
+                "Across Shoulder ( Inches )": 18.897648,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 42.519708,
+                "Front Length ( Inches )": 20.866153
+            }
+        },
+        "SWEATSHIRT": {
+            "0-6M": {
+                "Across Shoulder ( Inches )": 8.267721,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 21.259854,
+                "Front Length ( Inches )": 13.385834000000001
+            },
+            "6-12M": {
+                "Across Shoulder ( Inches )": 8.661422,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 22.047256,
+                "Front Length ( Inches )": 14.173236000000001
+            },
+            "12-18M": {
+                "Across Shoulder ( Inches )": 9.055123,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 22.834658,
+                "Front Length ( Inches )": 14.960638000000001
+            },
+            "18-24M": {
+                "Across Shoulder ( Inches )": 9.448824,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 23.62206,
+                "Front Length ( Inches )": 15.748040000000001
+            },
+            "2-3Y": {
+                "Across Shoulder ( Inches )": 9.842525,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 24.409462,
+                "Front Length ( Inches )": 16.535442
+            },
+            "3-4Y": {
+                "Across Shoulder ( Inches )": 11.023628,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 26.771668000000002,
+                "Front Length ( Inches )": 17.322844
+            },
+            "4-5Y": {
+                "Across Shoulder ( Inches )": 12.204731,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 29.133874000000002,
+                "Front Length ( Inches )": 18.110246
+            },
+            "5-6Y": {
+                "Across Shoulder ( Inches )": 13.385834000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 31.496080000000003,
+                "Front Length ( Inches )": 18.897648
+            },
+            "7-8Y": {
+                "Across Shoulder ( Inches )": 14.566937000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 33.858286,
+                "Front Length ( Inches )": 19.68505
+            },
+            "9-10Y": {
+                "Across Shoulder ( Inches )": 15.748040000000001,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 36.220492,
+                "Front Length ( Inches )": 20.472452
+            },
+            "11-12Y": {
+                "Across Shoulder ( Inches )": 16.929143,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 38.582698,
+                "Front Length ( Inches )": 21.259854
+            },
+            "13-14Y": {
+                "Across Shoulder ( Inches )": 18.110246,
+                "Bust ( Inches )": 0,
+                "Chest ( Inches )": 40.944904,
+                "Front Length ( Inches )": 22.047256
+            }
+        },
+        "JEANS": {
+            "2-3Y": {
+                "Inseam Length ( Inches )": 17.3,
+                "To Fit Waist ( Inches )": 12.6
+            },
+            "3-4Y": {
+                "Inseam Length ( Inches )": 18.9,
+                "To Fit Waist ( Inches )": 13.2
+            },
+            "4-5Y": {
+                "Inseam Length ( Inches )": 19.7,
+                "To Fit Waist ( Inches )": 14.4
+            },
+            "5-6Y": {
+                "Inseam Length ( Inches )": 20.5,
+                "To Fit Waist ( Inches )": 15.8
+            },
+            "7-8Y": {
+                "Inseam Length ( Inches )": 22.1,
+                "To Fit Waist ( Inches )": 16.9
+            },
+            "9-10Y": {
+                "Inseam Length ( Inches )": 23.6,
+                "To Fit Waist ( Inches )": 18.9
+            },
+            "11-12Y": {
+                "Inseam Length ( Inches )": 25.2,
+                "To Fit Waist ( Inches )": 21.6
+            },
+            "13-14Y": {
+                "Inseam Length ( Inches )": 26.8,
+                "To Fit Waist ( Inches )": 24.4
+            }
+        }
+    },
+    "footwear_sizecharts": {}
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+static/temp_uploads/*
+static/temp_workspace/*
+gemini_api_key.txt
+myntra_vision_learning.json
+.DS_Store
+.env
+.idea/
+.vscode/

@@ -1,0 +1,497 @@
+{
+  "T-Shirts": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "BOYS T-SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Tshirts": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "BOYS T-SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "T-Shirt": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "BOYS T-SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Tshirt": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "BOYS T-SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Tops": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "GIRLS  TOP"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Top": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  TOP",
+      "BOYS": "BOYS T-SHIRT",
+      "DEFAULT": "GIRLS  TOP"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round)": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Shirts": {
+    "sizechart_category": {
+      "GIRLS": "BOYS SHIRT",
+      "BOYS": "BOYS SHIRT",
+      "DEFAULT": "BOYS SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round )": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Shirt": {
+    "sizechart_category": {
+      "GIRLS": "BOYS SHIRT",
+      "BOYS": "BOYS SHIRT",
+      "DEFAULT": "BOYS SHIRT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "HALF CHEST ": "Chest ( Inches )",
+      "Chest  (all round )": "Chest ( Inches )",
+      "Chest all round": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "ACROSS SHOULDER ": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )"
+    }
+  },
+  "Trousers": {
+    "sizechart_category": {
+      "GIRLS": "BOYS LOWER /JOGGER",
+      "BOYS": "BOYS LOWER /JOGGER",
+      "DEFAULT": "BOYS LOWER /JOGGER"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Trouser": {
+    "sizechart_category": {
+      "GIRLS": "BOYS LOWER /JOGGER",
+      "BOYS": "BOYS LOWER /JOGGER",
+      "DEFAULT": "BOYS LOWER /JOGGER"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Track Pants": {
+    "sizechart_category": {
+      "GIRLS": "BOYS LOWER /JOGGER",
+      "BOYS": "BOYS LOWER /JOGGER",
+      "DEFAULT": "BOYS LOWER /JOGGER"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Joggers": {
+    "sizechart_category": {
+      "GIRLS": "BOYS LOWER /JOGGER",
+      "BOYS": "BOYS LOWER /JOGGER",
+      "DEFAULT": "BOYS LOWER /JOGGER"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Shorts": {
+    "sizechart_category": {
+      "GIRLS": "BOYS SHORTS",
+      "BOYS": "BOYS SHORTS",
+      "DEFAULT": "BOYS SHORTS"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Inseam Length": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Short": {
+    "sizechart_category": {
+      "GIRLS": "BOYS SHORTS",
+      "BOYS": "BOYS SHORTS",
+      "DEFAULT": "BOYS SHORTS"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Outseam Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Inseam Length": "Inseam Length ( Inches )",
+      "Garment Waist (all round)": "Garment Waist ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )",
+      "HALF WAIST": "Waist ( Inches )",
+      "HALF WAIST ": "Waist ( Inches )",
+      "HIP WIDTH": "To Fit Hip ( Inches )"
+    }
+  },
+  "Dresses": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  DRESS",
+      "BOYS": "GIRLS  DRESS",
+      "DEFAULT": "GIRLS  DRESS"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "Waist": "To Fit Waist ( Inches )",
+      "Hips": "To Fit Hip ( Inches )"
+    }
+  },
+  "Dress": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  DRESS",
+      "BOYS": "GIRLS  DRESS",
+      "DEFAULT": "GIRLS  DRESS"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "Waist": "To Fit Waist ( Inches )",
+      "Hips": "To Fit Hip ( Inches )"
+    }
+  },
+  "Jumpsuits": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  JUMPSUIT",
+      "BOYS": "GIRLS  JUMPSUIT",
+      "DEFAULT": "GIRLS  JUMPSUIT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )"
+    }
+  },
+  "Jumpsuit": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS  JUMPSUIT",
+      "BOYS": "GIRLS  JUMPSUIT",
+      "DEFAULT": "GIRLS  JUMPSUIT"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )"
+    }
+  },
+  "Dungarees": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS FULL LENGTH DUNGAREE",
+      "BOYS": "GIRLS FULL LENGTH DUNGAREE",
+      "DEFAULT": "GIRLS FULL LENGTH DUNGAREE"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist": "Garment Waist ( Inches )",
+      "To Fit Waist": "To Fit Waist ( Inches )"
+    }
+  },
+  "Dungaree": {
+    "sizechart_category": {
+      "GIRLS": "GIRLS FULL LENGTH DUNGAREE",
+      "BOYS": "GIRLS FULL LENGTH DUNGAREE",
+      "DEFAULT": "GIRLS FULL LENGTH DUNGAREE"
+    },
+    "mappings": {
+      "TOTAL LENGTH": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "ACROSS SHOULDER": "Across Shoulder ( Inches )",
+      "FULL SLEEVE LENGTH": "Sleeve-Length ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "Garment Waist": "Garment Waist ( Inches )",
+      "To Fit Waist": "To Fit Waist ( Inches )"
+    }
+  },
+  "Sweatshirts": {
+    "sizechart_category": {
+      "GIRLS": "Sweatshirt",
+      "BOYS": "Sweatshirt",
+      "DEFAULT": "Sweatshirt"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Sweatshirt": {
+    "sizechart_category": {
+      "GIRLS": "Sweatshirt",
+      "BOYS": "Sweatshirt",
+      "DEFAULT": "Sweatshirt"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Sweaters": {
+    "sizechart_category": {
+      "GIRLS": "Sweatshirt",
+      "BOYS": "Sweatshirt",
+      "DEFAULT": "Sweatshirt"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Sweater": {
+    "sizechart_category": {
+      "GIRLS": "Sweatshirt",
+      "BOYS": "Sweatshirt",
+      "DEFAULT": "Sweatshirt"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Jackets": {
+    "sizechart_category": {
+      "GIRLS": "Jacket",
+      "BOYS": "Jacket",
+      "DEFAULT": "Jacket"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Jacket": {
+    "sizechart_category": {
+      "GIRLS": "Jacket",
+      "BOYS": "Jacket",
+      "DEFAULT": "Jacket"
+    },
+    "mappings": {
+      "Across Shoulder ( Inches )": "Across Shoulder ( Inches )",
+      "Chest ( Inches )": "Chest ( Inches )",
+      "Front Length ( Inches )": "Front Length ( Inches )",
+      "Bust ( Inches )": "Bust ( Inches )"
+    }
+  },
+  "Rompers": {
+    "sizechart_category": {
+      "GIRLS": "Rompers",
+      "BOYS": "Rompers",
+      "DEFAULT": "Rompers"
+    },
+    "mappings": {
+      "Across Shoulder": "Across Shoulder ( Inches )",
+      "Chest": "Chest ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "Inseam Length": "Inseam Length ( Inches )"
+    }
+  },
+  "Romper": {
+    "sizechart_category": {
+      "GIRLS": "Rompers",
+      "BOYS": "Rompers",
+      "DEFAULT": "Rompers"
+    },
+    "mappings": {
+      "Across Shoulder": "Across Shoulder ( Inches )",
+      "Chest": "Chest ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "Inseam Length": "Inseam Length ( Inches )"
+    }
+  },
+  "Clothing Set": {
+    "sizechart_category": {
+      "GIRLS": "CLOTHING SET",
+      "BOYS": "CLOTHING SET",
+      "DEFAULT": "CLOTHING SET"
+    },
+    "mappings": {
+      "TOTAL LENGTH  (UPPER BODY WEAR)": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "WAIST ( LOWER BODY WEAR )": "Garment Waist ( Inches )",
+      "LENGTH (LOWER WEAR )": "Outseam Length ( Inches )",
+      "Outseam Length (all round)": "Outseam Length ( Inches )"
+    }
+  },
+  "Clothing Sets": {
+    "sizechart_category": {
+      "GIRLS": "CLOTHING SET",
+      "BOYS": "CLOTHING SET",
+      "DEFAULT": "CLOTHING SET"
+    },
+    "mappings": {
+      "TOTAL LENGTH  (UPPER BODY WEAR)": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "WAIST ( LOWER BODY WEAR )": "Garment Waist ( Inches )",
+      "LENGTH (LOWER WEAR )": "Outseam Length ( Inches )",
+      "Outseam Length (all round)": "Outseam Length ( Inches )"
+    }
+  },
+  "Jeans": {
+    "sizechart_category": {
+      "GIRLS": "JEANS",
+      "BOYS": "JEANS",
+      "DEFAULT": "JEANS"
+    },
+    "mappings": {
+      "Inseam Length ( Inches )": "Inseam Length ( Inches )",
+      "To Fit Waist ( Inches )": "To Fit Waist ( Inches )",
+      "INSEAM LENGTH": "Inseam Length ( Inches )",
+      "To Fit Waist  (all round)": "To Fit Waist ( Inches )"
+    }
+  }
+}

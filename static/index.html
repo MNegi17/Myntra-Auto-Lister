@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MN Myntra Auto Lister - Premium AI Catalog Lister</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="app-layout">
+        
+        <!-- Left Sidebar Navigation (Matching Reference Images Layout) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-avatar">MN</div>
+                    <div class="logo-text">
+                        <h3>MN Myntra</h3>
+                        <p>Auto Lister PRO</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <button class="menu-item active" id="btn-tab-welcome" onclick="switchTab('welcome-page')">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </button>
+                <button class="menu-item" id="btn-tab-data" onclick="switchTab('data-page')">
+                    <i data-lucide="upload-cloud"></i>
+                    <span>Upload Center</span>
+                </button>
+                <button class="menu-item" id="btn-tab-vision" onclick="switchTab('vision-page')">
+                    <i data-lucide="sparkles"></i>
+                    <span>AI Vision</span>
+                </button>
+                <button class="menu-item" id="btn-tab-settings" onclick="switchTab('settings-page')">
+                    <i data-lucide="sliders"></i>
+                    <span>Listing Settings</span>
+                </button>
+                <button class="menu-item" id="btn-tab-terminal" onclick="switchTab('terminal-page')">
+                    <i data-lucide="terminal"></i>
+                    <span>Run Terminal</span>
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <p>© 2026 MN. All Rights Reserved.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area (Right Hand Panel) -->
+        <main class="main-content">
+            
+            <!-- Global Status Bar & Theme Switcher -->
+            <header class="top-bar">
+                <div class="top-bar-title">
+                    <h2 id="page-title-text">Dashboard Overview</h2>
+                </div>
+                <div class="top-bar-controls">
+                    <div class="status-pill idle" id="global-status-pill">
+                        <span class="status-dot"></span>
+                        <span id="global-status-text">Ready</span>
+                    </div>
+                    <div class="theme-toggle-container">
+                        <i data-lucide="sun" class="theme-icon active" id="theme-sun"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <i data-lucide="moon" class="theme-icon" id="theme-moon"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Scrollable View Container -->
+            <div class="scroll-container">
+                
+                <!-- TAB A: Dashboard Overview (Welcome Panel) -->
+                <div class="tab-content active" id="welcome-page">
+                    <div class="welcome-hero-banner">
+                        <div class="hero-text-content">
+                            <span class="hero-badge">
+                                <i data-lucide="sparkles"></i>
+                                AI-Powered · Built for Myntra Vendors
+                            </span>
+                            <h1>Your Catalog Listing, on Autopilot</h1>
+                            <p>
+                                MN Myntra Auto Lister reads your Item Directory and Content Sheet, then automatically fills a fresh Myntra SKU template — mapping product names, colours, sizes, descriptions, fabric details, measurements, pricing, and category attributes — so a listing that takes hours manually is done in seconds.
+                            </p>
+                            <button class="btn btn-primary" onclick="switchTab('data-page')">
+                                <span>🚀 Start Listing</span>
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <h3 class="section-title">Offline AI Model Attributes</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-icon pink">
+                                    <i data-lucide="shirt"></i>
+                                </div>
+                                <div class="stat-meta">
+                                    <h4>Purple United Kids</h4>
+                                    <p>Apparel Automation Line</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-icon purple">
+                                    <i data-lucide="footprints"></i>
+                                </div>
+                                <div class="stat-meta">
+                                    <h4>toothless</h4>
+                                    <p>Footwear Automation Line</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-icon green">
+                                    <i data-lucide="ruler"></i>
+                                </div>
+                                <div class="stat-meta">
+                                    <h4>Dynamic Size charts</h4>
+                                    <p>11 Categories Auto Mapped</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-icon gold">
+                                    <i data-lucide="zap"></i>
+                                </div>
+                                <div class="stat-meta">
+                                    <h4>Seconds, Not Hours</h4>
+                                    <p>Full template filled automatically</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB B: Upload Center (Matching Layout & Subtitles) -->
+                <div class="tab-content" id="data-page">
+                    <div class="page-intro-header">
+                        <h2>Upload Center</h2>
+                        <p class="intro-subtitle">Upload master files, configure absolute paths, and designate output folders for automated population.</p>
+                    </div>
+
+                    <!-- STEP 1: Excel Source Directories -->
+                    <div class="step-container">
+                        <span class="step-label">STEP 1 — MASTER EXCEL FILES & SAVE LOCATION</span>
+                        
+                        <div class="master-files-grid">
+                            <!-- Card 1: Item Directory -->
+                            <div class="excel-card">
+                                <div class="excel-card-body">
+                                    <div class="excel-icon">
+                                        <i data-lucide="file-spreadsheet"></i>
+                                    </div>
+                                    <h4>Item Directory</h4>
+                                    <p>Warehouse catalog — active sizes, MRPs, and item barcoding logs.</p>
+                                    <div class="file-selected-badge" id="item-path-display" style="display:none;"><i data-lucide="check-circle"></i> <span id="item-file-name">File selected</span><button class="clear-btn-inline" onclick="clearSelectedPath('item-path'); event.stopPropagation();" title="Remove selection"><i data-lucide="x" style="width:12px; height:12px;"></i></button></div>
+                                    <div class="upload-loader" id="item-path-loader" style="display:none; font-size:12px; color:var(--primary-color); align-items:center; gap:6px; margin-top:8px;">
+                                        <span class="spinner-small"></span>
+                                        <span>Uploading file...</span>
+                                    </div>
+                                </div>
+                                <div class="excel-card-footer">
+                                    <input type="hidden" id="item-path">
+                                    <input type="file" id="item-path-file" style="display:none;" accept=".xlsx, .xls" onchange="uploadSelectedFile('item-path')">
+                                    <button class="btn btn-browse w-full" id="btn-browse-item-path" onclick="browsePathDirect('item-path', 'file', 'Select Item Directory Excel File')">
+                                        <i data-lucide="folder-search"></i>
+                                        <span>Select file</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Content Sheet -->
+                            <div class="excel-card">
+                                <div class="excel-card-body">
+                                    <div class="excel-icon">
+                                        <i data-lucide="file-text"></i>
+                                    </div>
+                                    <h4>Content Sheet <span class="optional-badge">Optional</span></h4>
+                                    <p>Titles, descriptions, fabric, and copywriting details per SKU. System auto-fills defaults if not provided.</p>
+                                    <div class="file-selected-badge" id="content-path-display" style="display:none;"><i data-lucide="check-circle"></i> <span id="content-file-name">File selected</span><button class="clear-btn-inline" onclick="clearSelectedPath('content-path'); event.stopPropagation();" title="Remove selection"><i data-lucide="x" style="width:12px; height:12px;"></i></button></div>
+                                    <div class="upload-loader" id="content-path-loader" style="display:none; font-size:12px; color:var(--primary-color); align-items:center; gap:6px; margin-top:8px;">
+                                        <span class="spinner-small"></span>
+                                        <span>Uploading file...</span>
+                                    </div>
+                                </div>
+                                <div class="excel-card-footer">
+                                    <input type="hidden" id="content-path">
+                                    <input type="file" id="content-path-file" style="display:none;" accept=".xlsx, .xls" onchange="uploadSelectedFile('content-path')">
+                                    <button class="btn btn-browse w-full" id="btn-browse-content-path" onclick="browsePathDirect('content-path', 'file', 'Select Content Copywriting File')">
+                                        <i data-lucide="folder-search"></i>
+                                        <span>Select file</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Fresh Template -->
+                            <div class="excel-card">
+                                <div class="excel-card-body">
+                                    <div class="excel-icon">
+                                        <i data-lucide="file-down"></i>
+                                    </div>
+                                    <h4>Myntra SKU Template</h4>
+                                    <p>Blank sheet directly downloaded from Myntra vendor portal.</p>
+                                    <div class="file-selected-badge" id="template-path-display" style="display:none;"><i data-lucide="check-circle"></i> <span id="template-file-name">File selected</span><button class="clear-btn-inline" onclick="clearSelectedPath('template-path'); event.stopPropagation();" title="Remove selection"><i data-lucide="x" style="width:12px; height:12px;"></i></button></div>
+                                    <div class="upload-loader" id="template-path-loader" style="display:none; font-size:12px; color:var(--primary-color); align-items:center; gap:6px; margin-top:8px;">
+                                        <span class="spinner-small"></span>
+                                        <span>Uploading file...</span>
+                                    </div>
+                                </div>
+                                <div class="excel-card-footer">
+                                    <input type="hidden" id="template-path">
+                                    <input type="file" id="template-path-file" style="display:none;" accept=".xlsx, .xls" onchange="uploadSelectedFile('template-path')">
+                                    <button class="btn btn-browse w-full" id="btn-browse-template-path" onclick="browsePathDirect('template-path', 'file', 'Select Fresh SKU Template Excel File')">
+                                        <i data-lucide="folder-search"></i>
+                                        <span>Select file</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Output Save Location -->
+                            <div class="excel-card" id="output-dir-card">
+                                <div class="excel-card-body">
+                                    <div class="excel-icon">
+                                        <i data-lucide="folder-output"></i>
+                                    </div>
+                                    <h4>Output Save Folder</h4>
+                                    <p>Target folder where populated listing sheets will be saved.</p>
+                                    <div class="file-selected-badge" id="output-dir-display" style="display:none;"><i data-lucide="check-circle"></i> <span id="output-dir-name">Folder selected</span><button class="clear-btn-inline" onclick="clearSelectedPath('output-dir'); event.stopPropagation();" title="Remove selection"><i data-lucide="x" style="width:12px; height:12px;"></i></button></div>
+                                </div>
+                                <div class="excel-card-footer">
+                                    <input type="hidden" id="output-dir">
+                                    <button class="btn btn-browse w-full" onclick="browsePathDirect('output-dir', 'folder', 'Select Output Save Directory')">
+                                        <i data-lucide="folder-search"></i>
+                                        <span>Select folder</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Product Images Folder -->
+                            <div class="excel-card">
+                                <div class="excel-card-body">
+                                    <div class="excel-icon">
+                                        <i data-lucide="image"></i>
+                                    </div>
+                                    <h4 id="product-images-card-title">Product Images Folder <span class="optional-badge">Optional</span></h4>
+                                    <p id="product-images-card-desc">Local directory containing front/back product photos for AI extraction. Only needed when AI Vision is enabled.</p>
+                                    <div class="file-selected-badge" id="product-images-dir-display" style="display:none;"><i data-lucide="check-circle"></i> <span id="product-images-dir-name">Folder selected</span><button class="clear-btn-inline" onclick="clearSelectedPath('product-images-dir'); event.stopPropagation();" title="Remove selection"><i data-lucide="x" style="width:12px; height:12px;"></i></button></div>
+                                    <div class="upload-loader" id="product-images-dir-loader" style="display:none; font-size:12px; color:var(--primary-color); align-items:center; gap:6px; margin-top:8px;">
+                                        <span class="spinner-small"></span>
+                                        <span id="product-images-dir-loader-text">Uploading ZIP...</span>
+                                    </div>
+                                </div>
+                                <div class="excel-card-footer">
+                                    <input type="hidden" id="product-images-dir">
+                                    <input type="file" id="product-images-dir-file" style="display:none;" accept=".zip" onchange="uploadSelectedFile('product-images-dir', true)">
+                                    <button class="btn btn-browse w-full" id="btn-browse-product-images-dir" onclick="browsePathDirect('product-images-dir', 'folder', 'Select Product Images Folder')">
+                                        <i data-lucide="folder-search"></i>
+                                        <span id="btn-browse-product-images-text">Select folder</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: Products Target Filtering -->
+                    <div class="step-container" style="margin-top: 30px;">
+                        <span class="step-label">STEP 2 — PRODUCTS TO LIST</span>
+                        <div class="products-list-card">
+                            <div class="products-list-header">
+                                <i data-lucide="filter" class="pink-icon"></i>
+                                <div class="products-list-title">
+                                    <h4>Products to List (Item-Color) *</h4>
+                                    <p>Specify exact variants to generate or type <code>ALL</code> to process the complete inventory sheet.</p>
+                                </div>
+                            </div>
+                            <div class="products-list-body">
+                                <textarea id="products-filter" rows="5" placeholder="Enter Item-Color codes to list, one per line...&#10;e.g. PGTSFS002125-PEACH&#10;Or type ALL to process entire inventory sheet."></textarea>
+                            </div>
+                            <div class="products-list-footer">
+                                <button class="btn btn-secondary" onclick="clearFilterText()">
+                                    <i data-lucide="x-circle"></i>
+                                    <span>Clear Filter</span>
+                                </button>
+                                <button class="btn btn-primary" onclick="switchTab('settings-page')">
+                                    <span>Proceed to Listing Settings</span>
+                                    <i data-lucide="chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB C: Listing Settings & Categories -->
+                <div class="tab-content" id="settings-page">
+                    <div class="page-intro-header">
+                        <h2>Listing Settings</h2>
+                        <p class="intro-subtitle">Configure listing categories, rules, and pricing percentages before triggering the listing engine.</p>
+                    </div>
+
+                    <div class="settings-layout-grid">
+                        
+                        <!-- Left Block: Category & Pricing Card -->
+                        <div class="settings-card-container">
+                            <div class="modern-card">
+                                <div class="modern-card-header">
+                                    <i data-lucide="tag" class="pink-icon"></i>
+                                    <h4>Category & Pricing Rules</h4>
+                                </div>
+                                <div class="modern-card-body">
+                                    
+                                    <!-- Searchable Category combobox -->
+                                    <div class="input-group">
+                                        <label for="category-search-input">Listing Category</label>
+                                        <div class="custom-combobox" id="category-combobox">
+                                            <div class="combobox-trigger">
+                                                <i data-lucide="tag" class="field-icon"></i>
+                                                <input type="text" id="category-search-input" placeholder="Search listing category (e.g. Shorts, Trousers, Tops)..." autocomplete="off">
+                                                <i data-lucide="chevron-down" class="dropdown-chevron"></i>
+                                            </div>
+                                            <div class="combobox-dropdown" id="category-dropdown-list">
+                                                <!-- Dynamically generated items list -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pricing Rules select wrapper -->
+                                    <div class="input-group" style="margin-top: 18px;">
+                                        <label for="pricing-rule">ISP Pricing Rule</label>
+                                        <div class="select-wrapper">
+                                            <i data-lucide="tags" class="field-icon"></i>
+                                            <select id="pricing-rule" onchange="toggleDiscountWidget()">
+                                                <option value="Discounted" selected>Discounted (Percentage Rule)</option>
+                                                <option value="Same as MRP">Same as MRP</option>
+                                            </select>
+                                            <i data-lucide="chevron-down" class="select-chevron"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slider block -->
+                                    <div class="input-group" id="discount-group" style="margin-top: 18px;">
+                                        <div class="label-with-value">
+                                            <label for="discount-slider">Discount Rate</label>
+                                            <span class="value-bubble" id="discount-bubble">50%</span>
+                                        </div>
+                                        <div class="slider-container">
+                                            <span class="slider-limit">0%</span>
+                                            <input type="range" id="discount-slider" min="0" max="100" value="50" step="5" oninput="updateSliderBubble(this.value)">
+                                            <span class="slider-limit">100%</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- AI Vision Activation checkbox -->
+                                    <div class="input-group" style="margin-top: 18px; border-top: 1px solid var(--border-color); padding-top: 18px;">
+                                        <div class="checkbox-container">
+                                            <input type="checkbox" id="use-vision-checkbox" onchange="toggleVisionSettings()">
+                                            <label for="use-vision-checkbox" style="font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+                                                <i data-lucide="sparkles" class="pink-icon" style="width: 16px; height: 16px;"></i>
+                                                Enable AI Vision Auto-Fill
+                                            </label>
+                                        </div>
+                                        <p style="font-size: 11px; color: var(--text-secondary); margin-top: 6px; padding-left: 24px;">
+                                            Automatically parses front/back product images from the Product Images Folder to classify neck types, sleeve styles, prints, patterns, etc., matching them to valid template values.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Block: Preset rules review -->
+                        <div class="settings-card-container">
+                            <div class="modern-card">
+                                <div class="modern-card-header">
+                                    <i data-lucide="shield-check" class="pink-icon"></i>
+                                    <h4>Active Listing Guardrails</h4>
+                                </div>
+                                <div class="modern-card-body info-list">
+                                    <div class="info-list-item">
+                                        <i data-lucide="check" class="green-check"></i>
+                                        <div>
+                                            <strong>Brand Identification:</strong>
+                                            <p>Apparel lists as <em>Purple United Kids</em>. Footwear lists as <em>toothless</em>.</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-list-item">
+                                        <i data-lucide="check" class="green-check"></i>
+                                        <div>
+                                            <strong>Apparel Fitting Presets:</strong>
+                                            <p>Regular fit, mid-rise waist, and knitted weave type are auto-filled for every listing.</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-list-item">
+                                        <i data-lucide="check" class="green-check"></i>
+                                        <div>
+                                            <strong>Size Chart Auto-Mapping:</strong>
+                                            <p>Measurements are filled from the offline size chart database based on gender and category.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary w-full" style="margin-top: 10px;" onclick="switchTab('terminal-page')">
+                                        <span>Proceed to Generation Console</span>
+                                        <i data-lucide="zap"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB D: Log Terminal Console -->
+                <div class="tab-content" id="terminal-page">
+                    <div class="page-intro-header">
+                        <h2>Run Terminal</h2>
+                        <p class="intro-subtitle">Execute listings dry runs or run absolute generation with interactive progress and terminal log feeds.</p>
+                    </div>
+
+                    <!-- Run Actions Panel -->
+                    <div class="run-actions-card">
+                        <div class="action-buttons-group">
+                            <button class="btn btn-primary btn-lg" id="btn-generate" onclick="triggerAutomation(false)">
+                                <i data-lucide="play-circle"></i>
+                                <span>⚡ Generate Listing Sheet</span>
+                            </button>
+                            <button class="btn btn-secondary btn-lg" id="btn-dry-run" onclick="triggerAutomation(true)">
+                                <i data-lucide="eye"></i>
+                                <span>🔍 Analyze Dry Run</span>
+                            </button>
+                        </div>
+                        
+                        <div class="progress-bar-wrapper" id="progress-wrapper">
+                            <div class="progress-bar-meta">
+                                <span id="progress-step-text">Awaiting execution launch...</span>
+                                <span id="progress-percent-text">0%</span>
+                            </div>
+                            <div class="progress-bar-track">
+                                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Success Download Section -->
+                        <div class="download-action-card" id="download-action-card" style="display: none; margin-top: 20px;">
+                            <div class="download-card-content" style="display: flex; align-items: center; gap: 12px;">
+                                <i data-lucide="check-circle" class="pink-icon" style="width: 32px; height: 32px; color: var(--primary-color);"></i>
+                                <div>
+                                    <h4 style="margin: 0; font-size: 14px; font-weight: 600;">Populated Spreadsheet Ready!</h4>
+                                    <p id="download-file-name" style="margin: 2px 0 0 0; font-size: 12px; color: var(--text-secondary);">Myntra-Populated-Excel.xlsx</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" id="btn-download-result" onclick="downloadPopulatedFile()" style="margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%;">
+                                <i data-lucide="download" style="width:16px; height:16px;"></i>
+                                <span>Download Excel File</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Console logs window -->
+                    <div class="console-wrapper">
+                        <div class="console-header-bar">
+                            <div class="console-header-title">
+                                <i data-lucide="terminal"></i>
+                                <span>Live Execution Console</span>
+                            </div>
+                            <div class="console-filter-controls">
+                                <button class="console-filter-btn active" onclick="filterLogs('ALL')">All</button>
+                                <button class="console-filter-btn" onclick="filterLogs('INFO')">Info</button>
+                                <button class="console-filter-btn" onclick="filterLogs('SUCCESS')">Success</button>
+                                <button class="console-filter-btn" onclick="filterLogs('WARNING')">Warnings</button>
+                                <button class="console-filter-btn" onclick="filterLogs('ERROR')">Errors</button>
+                                <button class="console-clear-btn" onclick="clearLogs()" title="Clear console content">
+                                    <i data-lucide="trash-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="console-output-screen" id="console-terminal">
+                            <div class="console-line info">
+                                <span class="c-time">[14:10:00]</span>
+                                <span class="c-tag info">[INFO]</span>
+                                Systems online. Select files and launch campaign...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB E: AI Vision Database & Corrector -->
+                <div class="tab-content" id="vision-page">
+                    <div class="page-intro-header">
+                        <h2>AI Vision Database</h2>
+                        <p class="intro-subtitle">Review and correct AI predictions generated automatically during listing runs, edit them to train the model, or test-run custom images.</p>
+                    </div>
+
+                    <div class="vision-layout-grid">
+                        <!-- Column 1: API settings and Upload Zone -->
+                        <div class="vision-col-left">
+                            
+                            <!-- Card 1: Gemini API Key Setup -->
+                            <div class="modern-card" style="margin-bottom: 24px;">
+                                <div class="modern-card-header">
+                                    <i data-lucide="key" class="pink-icon"></i>
+                                    <h4>Gemini Vision API Configuration</h4>
+                                </div>
+                                <div class="modern-card-body">
+                                    <div class="input-group-inline">
+                                        <div class="input-with-button">
+                                            <input type="password" id="gemini-key-input" placeholder="Enter Google Gemini API Key...">
+                                            <button class="btn btn-primary" onclick="saveGeminiKey()">Save Key</button>
+                                        </div>
+                                    </div>
+                                    <p class="helper-text" style="font-size: 11px; margin-top: 6px; color: var(--text-secondary);">
+                                        Requires a free Gemini API Key. Get one instantly from <a href="https://aistudio.google.com/" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Google AI Studio</a>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Image Upload Dropzone -->
+                            <div class="modern-card">
+                                <div class="modern-card-header">
+                                    <i data-lucide="image" class="pink-icon"></i>
+                                    <h4>Product Image Uploads</h4>
+                                </div>
+                                <div class="modern-card-body">
+                                    
+                                    <!-- Double Dropzones: Front & Back -->
+                                    <div class="dual-dropzones">
+                                        <!-- Front Image Dropzone -->
+                                        <div class="dropzone" id="front-dropzone" onclick="document.getElementById('front-file-input').click()">
+                                            <input type="file" id="front-file-input" style="display:none;" accept="image/*" onchange="previewImage(this, 'front-preview')">
+                                            <div class="dropzone-content" id="front-preview">
+                                                <i data-lucide="image" class="dropzone-icon"></i>
+                                                <h5>Front Image</h5>
+                                                <p>Click or drag image here</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Back Image Dropzone -->
+                                        <div class="dropzone" id="back-dropzone" onclick="document.getElementById('back-file-input').click()">
+                                            <input type="file" id="back-file-input" style="display:none;" accept="image/*" onchange="previewImage(this, 'back-preview')">
+                                            <div class="dropzone-content" id="back-preview">
+                                                <i data-lucide="image" class="dropzone-icon"></i>
+                                                <h5>Back Image</h5>
+                                                <p>Click or drag image here</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Category selection for context -->
+                                    <div class="input-group" style="margin-top: 20px;">
+                                        <label for="vision-category-select">Product Category</label>
+                                        <div class="select-wrapper">
+                                            <i data-lucide="tag" class="field-icon"></i>
+                                            <select id="vision-category-select">
+                                                <!-- Prepopulated categories -->
+                                            </select>
+                                            <i data-lucide="chevron-down" class="select-chevron"></i>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary w-full btn-lg" style="margin-top: 15px;" id="btn-classify-vision" onclick="classifyVisionProduct()">
+                                        <i data-lucide="sparkles"></i>
+                                        <span>⚡ Classify Product Visuals</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Column 2: AI Predictions & Trained learnings list -->
+                        <div class="vision-col-right">
+                            
+                            <!-- Card 3: AI Predictions & Adjustments -->
+                            <div class="modern-card" id="vision-results-card" style="display: none; margin-bottom: 24px;">
+                                <div class="modern-card-header">
+                                    <i data-lucide="sliders" class="pink-icon"></i>
+                                    <h4>Review & Correct Predictions</h4>
+                                </div>
+                                <div class="modern-card-body">
+                                    <p class="section-desc" style="font-size:12px; margin-bottom:12px; color:var(--text-secondary);">
+                                        Below are the AI's predicted values. Verify them against your images. Adjust any incorrect fields and click "Train Model" to save the learning.
+                                    </p>
+                                    
+                                    <!-- Dynamic fields container -->
+                                    <div id="vision-predicted-fields-container" class="predictions-list">
+                                        <!-- Row blocks injected here dynamically -->
+                                    </div>
+                                    
+                                    <!-- SKU configuration before saving learning -->
+                                    <div class="sku-learn-row" style="margin-top: 16px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+                                        <div class="input-group">
+                                            <label for="vision-sku-input">Reference SKU Code (vendorArticleNumber)</label>
+                                            <input type="text" id="vision-sku-input" placeholder="e.g. PGTOPW001956-MAROON">
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-primary w-full" style="margin-top: 15px;" onclick="saveVisionLearning()">
+                                        <i data-lucide="graduation-cap"></i>
+                                        <span>Save Learning & Train Model</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Trained Knowledge Database Gallery -->
+                            <div class="modern-card">
+                                <div class="modern-card-header" style="justify-content: space-between; display: flex; align-items: center; width: 100%;">
+                                    <div style="display: flex; align-items: center; gap: 8px;">
+                                        <i data-lucide="database" class="pink-icon"></i>
+                                        <h4>Trained Products Gallery</h4>
+                                    </div>
+                                    <button class="btn btn-secondary btn-sm" onclick="exportAIBackup()" style="padding: 6px 12px; font-size: 11px; display: flex; align-items: center; gap: 4px;">
+                                        <i data-lucide="download" style="width:12px; height:12px;"></i>
+                                        <span>Export Backup</span>
+                                    </button>
+                                </div>
+                                <div class="modern-card-body">
+                                    <div class="trained-gallery-container" id="trained-gallery">
+                                        <!-- Dynamic cards representing trained products -->
+                                        <div class="no-learnings-message">
+                                            <i data-lucide="info" style="width:32px; height:32px; color:var(--text-secondary); margin-bottom:8px;"></i>
+                                            <p>No trained examples found. Upload and save a classification to populate your customized learning database.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
