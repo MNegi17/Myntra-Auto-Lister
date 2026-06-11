@@ -61,32 +61,50 @@ The application reads configurations dynamically from environment variables:
    ```
    Open your browser and navigate to `http://127.0.0.1:5000`.
 
+## ☁️ Cloud Deployment Instructions
+
+### Option A: Deploy to Railway (Recommended)
+
+Railway is highly recommended because it supports deploying your python server **and** provision a private MongoDB instance inside the same project dashboard.
+
+1. Go to **[Railway.app](https://railway.app/)** and log in with your GitHub account.
+2. Click **New Project** -> Select **Deploy from GitHub repo** -> Connect your `Myntra-Auto-Lister` repository.
+3. Click the **+ New** button in the canvas -> Select **Database** -> **Add MongoDB**.
+4. Click on your python application box on the canvas, navigate to the **Variables** tab, and create these environment variables:
+   * `IS_CLOUD` = `true`
+   * `GEMINI_API_KEY` = *your_gemini_api_key*
+   * `MONGO_URI` = `${{MongoDB.MONGO_URL}}` (Railway will automatically reference your database URI)
+5. Under the **Settings** tab of your app, scroll to **Networking** and click **Generate Domain** to get your public web URL!
+
 ---
 
-## ☁️ Cloud Deployment Instructions (e.g. Render)
+### Option B: Deploy to Render
 
-1. **Create a Web Service** on Render and link your GitHub repository.
-2. **Configure the build parameters**:
+1. Create a new **Web Service** on **[Render.com](https://render.com/)** and connect your GitHub repository.
+2. Configure build parameters:
    * **Language**: `Python`
    * **Build Command**: `pip install -r requirements.txt`
    * **Start Command**: `gunicorn web_app:app`
    * **Instance Type**: `Free`
-3. **Set Environment Variables** under Render's *Environment* tab:
-   * Add `IS_CLOUD` = `true`
-   * Add `GEMINI_API_KEY` = *your_google_ai_studio_api_key*
-   * Add `MONGO_URI` = *your_mongodb_atlas_connection_string* (see instructions below)
-4. **Deploy** the service. Your application will be live at `https://your-service-name.onrender.com`.
+3. Under the **Environment** tab, configure the following environment variables:
+   * `IS_CLOUD` = `true`
+   * `GEMINI_API_KEY` = *your_gemini_api_key*
+   * `MONGO_URI` = *your_mongodb_atlas_connection_string* (see instructions below)
+4. Click **Deploy Web Service** to take your server online.
 
 ---
 
-## 🗄️ MongoDB Atlas Database Setup (Free Tier)
+## 🗄️ Database Setup (Free Tier)
 
-To preserve AI learnings across cloud container restarts and share database entries among different users:
-1. Sign up for a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and build an **M0 Free Shared Tier** cluster.
-2. In the **Network Access** tab, add a rule to **Allow Access from Anywhere** (`0.0.0.0/0`).
-3. In the **Database Access** tab, create a database user with read/write privileges.
-4. Go to **Database** -> Click **Connect** -> Choose **Connect your application** (Python driver) and copy your connection string.
-5. Replace `<password>` with your database user's password, and set this string as the `MONGO_URI` environment variable in your Render settings. The app will automatically sync classifications in real-time.
+### 1. Private Database on Railway (For Option A)
+If deploying via Railway, adding the MongoDB database node and referencing it via `${{MongoDB.MONGO_URL}}` as the `MONGO_URI` variable is all that is required. No external accounts needed.
+
+### 2. MongoDB Atlas Cluster (For Option B/VPS)
+1. Sign up for a free account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and spin up a free **M0 cluster**.
+2. Under **Network Access**, choose **Allow Access from Anywhere** (`0.0.0.0/0`).
+3. Under **Database Access**, create a user with read/write privileges.
+4. Click **Connect** -> **Connect your application** (Python driver) and copy the cluster connection URL.
+5. Replace `<password>` with your database user's password, and set it as the `MONGO_URI` environment variable in your cloud provider.
 
 ---
 
