@@ -397,8 +397,23 @@ def run_automation_core(params, dry_run=False):
         
         # 2. Load Item Directory
         log_buffer.log("INFO", "Loading Item Directory (Master Sheet) into memory...")
-        item_df = pd.read_excel(item_path, sheet_name="Report")
-        log_buffer.log("SUCCESS", f"Loaded Item Directory: {len(item_df)} items.")
+        try:
+            xl = pd.ExcelFile(item_path)
+            sheet_names = xl.sheet_names
+            selected_sheet = None
+            for s in sheet_names:
+                if 'report' in s.lower():
+                    selected_sheet = s
+                    break
+            if not selected_sheet:
+                selected_sheet = sheet_names[0]
+                log_buffer.log("WARNING", f"Worksheet named 'Report' not found. Falling back to first sheet: '{selected_sheet}'")
+            item_df = pd.read_excel(item_path, sheet_name=selected_sheet)
+        except Exception as sheet_err:
+            log_buffer.log("ERROR", f"Failed to load Item Directory sheets: {str(sheet_err)}")
+            raise ValueError(f"Could not read the uploaded Item Directory: {str(sheet_err)}")
+
+        log_buffer.log("SUCCESS", f"Loaded Item Directory: {len(item_df)} items (Sheet: '{selected_sheet}').")
         
         current_task_status["progress"] = 0.25
         current_task_status["current_step"] = "Loading Content File"
@@ -406,8 +421,23 @@ def run_automation_core(params, dry_run=False):
         # 3. Load Content Sheet
         if content_path and str(content_path).strip():
             log_buffer.log("INFO", f"Loading Content File from: {content_path}...")
-            content_df = pd.read_excel(content_path, sheet_name="MarketplaceD2C")
-            log_buffer.log("SUCCESS", f"Loaded Content File: {len(content_df)} catalog templates.")
+            try:
+                c_xl = pd.ExcelFile(content_path)
+                c_sheet_names = c_xl.sheet_names
+                selected_c_sheet = None
+                for s in c_sheet_names:
+                    clean_s = s.lower().replace(" ", "").replace("_", "").replace("-", "")
+                    if 'marketplaced2c' in clean_s:
+                        selected_c_sheet = s
+                        break
+                if not selected_c_sheet:
+                    selected_c_sheet = c_sheet_names[0]
+                    log_buffer.log("WARNING", f"Worksheet named 'MarketplaceD2C' not found in Content File. Falling back to first sheet: '{selected_c_sheet}'")
+                content_df = pd.read_excel(content_path, sheet_name=selected_c_sheet)
+            except Exception as c_sheet_err:
+                log_buffer.log("ERROR", f"Failed to load Content File sheets: {str(c_sheet_err)}")
+                raise ValueError(f"Could not read the uploaded Content File: {str(c_sheet_err)}")
+            log_buffer.log("SUCCESS", f"Loaded Content File: {len(content_df)} catalog templates (Sheet: '{selected_c_sheet}').")
         else:
             log_buffer.log("INFO", "No Content File provided. Skipping description matching and using defaults.")
             content_df = pd.DataFrame(columns=["Item Name", "Myntra Title (List View Name)", "PDP Name (Myntra)", "Description", "SKU"])
