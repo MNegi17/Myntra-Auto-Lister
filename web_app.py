@@ -164,13 +164,23 @@ CATEGORY_DEFAULTS = {
         "Package Contains": "1 T-Shirt, 1 Shorts",
         "Type": "Clothing Set",
         "Length": "Regular"
+    },
+    "rompers": {
+        "Package Contains": "1 Romper",
+        "Type": "Romper",
+        "Length": "Short"
+    },
+    "romper": {
+        "Package Contains": "1 Romper",
+        "Type": "Romper",
+        "Length": "Short"
     }
 }
 
 MYNTRA_ARTICLE_TYPES = sorted(list(set([
     "T-Shirts", "Tshirts", "Shirts", "Tops", "Tunics", "Kurtas", "Kurta Sets", "Jackets", "Sweatshirts", 
     "Sweaters", "Cardigans", "Coats", "Shrugs", "Blazer", "Waistcoat", "Suits", "Nehru Jackets", 
-    "Ponchos", "Raincoats", "Windcheaters", "Dresses", "Jumpsuits", "Rompers", "Dungarees", "Sherwanis",
+    "Ponchos", "Raincoats", "Windcheaters", "Dresses", "Jumpsuits", "Rompers", "Romper", "Dungarees", "Sherwanis",
     "Trousers", "Shorts", "Jeans", "Track Pants", "Joggers", "Leggings", "Jeggings", "Capris", "Palazzos", 
     "Skirts", "Salwars", "Churidars", "Patialas", "Harem Pants", "Cargo Pants", "Tights", "Stockings",
     "Casual Shoes", "Sports Shoes", "Formal Shoes", "Sneakers", "Loafers", "Boots", "Sandals", "Slippers", 
