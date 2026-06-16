@@ -483,18 +483,30 @@ function connectLogStream() {
     eventSource.onmessage = (event) => {
         try {
             const data = JSON.parse(event.data);
+
+            // Silently ignore heartbeat events
+            if (data.type === 'heartbeat') return;
+
+            // Special download-trigger event: show card immediately from live stream
+            if (data.level === '__DOWNLOAD__') {
+                try {
+                    const payload = JSON.parse(data.message);
+                    showDownloadCard(payload.run_id, payload.filename);
+                } catch(pe) {}
+                return;
+            }
+
             if (data.level && data.message) {
                 addConsoleLine(data.level, data.message, data.time);
             }
         } catch (e) {
-            console.error('Error parsing stream event:', e);
+            // Ignore parse errors
         }
     };
-    
-    eventSource.onerror = (err) => {
-        console.error('EventSource failed. Reconnecting in 3s...', err);
+
+    eventSource.onerror = () => {
         eventSource.close();
-        setTimeout(connectLogStream, 3000);
+        setTimeout(connectLogStream, 4000);
     };
 }
 
@@ -664,20 +676,9 @@ async function checkTaskStatus() {
             btnGenerate.disabled = false;
             btnDryRun.disabled = false;
             updateProgressBar(1.0, "Process completed successfully!");
-            
-            // Handle output file download display
+
             if (data.output_file) {
-                lastRunId = data.run_id;
-                lastOutputFilename = data.output_file;
-                
-                const downloadCard = document.getElementById('download-action-card');
-                const downloadFileNameText = document.getElementById('download-file-name');
-                if (downloadCard && downloadFileNameText) {
-                    downloadFileNameText.innerText = data.output_file;
-                    downloadCard.style.display = 'block';
-                    downloadCard.scrollIntoView({ behavior: 'smooth' });
-                }
-                addConsoleLine('SUCCESS', `Successfully compiled! File ready for download: ${data.output_file}`);
+                showDownloadCard(data.run_id, data.output_file);
             } else {
                 addConsoleLine('SUCCESS', `Dry run analysis finished successfully. Verified matching SKU rows.`);
             }
@@ -705,13 +706,29 @@ async function checkTaskStatus() {
     }
 }
 
-// 7b. Download & Export Action Handlers
+// 7b. Show download card and store run info
+function showDownloadCard(runId, filename) {
+    lastRunId = runId || '';
+    lastOutputFilename = filename || '';
+    const downloadCard = document.getElementById('download-action-card');
+    const downloadFileNameText = document.getElementById('download-file-name');
+    if (downloadCard && downloadFileNameText) {
+        downloadFileNameText.innerText = filename;
+        downloadCard.style.display = 'block';
+        downloadCard.scrollIntoView({ behavior: 'smooth' });
+    }
+    addConsoleLine('SUCCESS', `File ready for download: ${filename}`);
+    lucide.createIcons();
+}
+
+// 7c. Download & Export Action Handlers
 window.downloadPopulatedFile = function() {
     if (!lastRunId || !lastOutputFilename) {
         alert("No output file available to download!");
         return;
     }
-    const url = `/api/vision/download-output?run_id=${encodeURIComponent(lastRunId)}&filename=${encodeURIComponent(lastOutputFilename)}`;
+    // Use the new persistent download endpoint (reads from MongoDB if file not on disk)
+    const url = `/api/download-file?run_id=${encodeURIComponent(lastRunId)}&filename=${encodeURIComponent(lastOutputFilename)}`;
     window.location.href = url;
     addConsoleLine('INFO', `Initiated browser download for: ${lastOutputFilename}`);
 };

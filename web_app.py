@@ -1078,7 +1078,7 @@ def run_automation_core(params, dry_run=False):
             wb.save(output_filepath)
             wb.close()
 
-            # Also copy to web app workspace for direct browser downloading
+            # Copy to web app workspace for direct browser downloading
             workspace_dir = os.path.join("static", "temp_workspace", run_id)
             os.makedirs(workspace_dir, exist_ok=True)
             workspace_filepath = os.path.join(workspace_dir, output_filename)
@@ -1086,24 +1086,49 @@ def run_automation_core(params, dry_run=False):
             try:
                 if os.path.abspath(output_filepath) != os.path.abspath(workspace_filepath):
                     shutil.copy(output_filepath, workspace_filepath)
-                    log_buffer.log("INFO", f"Saved copy to download workspace: {output_filename}")
-                else:
-                    log_buffer.log("INFO", f"Saved directly to download workspace: {output_filename}")
             except Exception as copy_err:
                 log_buffer.log("WARNING", f"Failed to save copy to web workspace: {str(copy_err)}")
-            
+
+            # Store file in MongoDB so it survives Railway container restarts
+            try:
+                import base64
+                mongo_uri = None
+                try:
+                    from vision_classifier import get_safe_mongodb_uri
+                    mongo_uri = get_safe_mongodb_uri(os.environ.get("MONGO_URI"))
+                except Exception:
+                    pass
+                if mongo_uri:
+                    import pymongo
+                    _mc = pymongo.MongoClient(mongo_uri, serverSelectionTimeoutMS=8000)
+                    _db = _mc.get_database()
+                    with open(workspace_filepath, "rb") as _f:
+                        _file_b64 = base64.b64encode(_f.read()).decode("utf-8")
+                    _db["output_files"].replace_one(
+                        {"run_id": run_id},
+                        {"run_id": run_id, "filename": output_filename, "file_b64": _file_b64, "created_at": datetime.now().isoformat()},
+                        upsert=True
+                    )
+                    _mc.close()
+                    log_buffer.log("INFO", f"Output file persisted to cloud storage for reliable download.")
+            except Exception as mongo_err:
+                log_buffer.log("WARNING", f"Could not persist file to cloud storage: {str(mongo_err)}")
+
             log_buffer.log("SUCCESS", "=== MYNTRA LISTING GENERATION COMPLETED ===")
             log_buffer.log("SUCCESS", f"Successfully generated {inserted_count} SKUs!")
             log_buffer.log("SUCCESS", f"File saved: {output_filename}")
+            # Emit special download-trigger event picked up by the frontend in real time
+            log_buffer.log("__DOWNLOAD__", json.dumps({"run_id": run_id, "filename": output_filename}))
         else:
             wb.close()
             log_buffer.log("SUCCESS", "=== DRY RUN ANALYSIS COMPLETE ===")
             log_buffer.log("SUCCESS", f"Dry run verified {inserted_count} rows matching constraints.")
-            
+
         current_task_status["progress"] = 1.0
         current_task_status["status"] = "success"
         if not dry_run:
             current_task_status["output_file"] = output_filename
+            current_task_status["run_id"] = run_id
         
     except Exception as e:
         log_buffer.log("ERROR", f"An error occurred: {str(e)}")
@@ -1448,26 +1473,64 @@ def export_db():
 @app.route('/api/logs')
 def stream_logs():
     q = log_buffer.add_listener()
-    
+
     def event_stream():
         try:
             yield f"data: {json.dumps({'time': datetime.now().strftime('%H:%M:%S'), 'level': 'INFO', 'message': 'Web Terminal Connected'})}\n\n"
             while True:
                 try:
-                    log_entry = q.get(timeout=2.0)
+                    log_entry = q.get(timeout=20.0)
                     yield f"data: {json.dumps(log_entry)}\n\n"
                 except queue.Empty:
-                    yield ": heartbeat\n\n"
+                    # Send a real SSE data event (not a comment) so Railway's proxy
+                    # sees active traffic and does not close the connection
+                    yield f"data: {json.dumps({'type': 'heartbeat'})}\n\n"
         except GeneratorExit:
             pass
         finally:
             log_buffer.remove_listener(q)
-        
+
     response = Response(event_stream(), mimetype="text/event-stream")
     response.headers['Cache-Control'] = 'no-cache'
     response.headers['Connection'] = 'keep-alive'
     response.headers['X-Accel-Buffering'] = 'no'
     return response
+
+
+@app.route('/api/download-file')
+def download_file_from_db():
+    """Download output file — reads from MongoDB if not on local disk (handles Railway restarts)."""
+    run_id = request.args.get("run_id", "")
+    filename = request.args.get("filename", "")
+    if not run_id or not filename:
+        return "Missing parameters", 400
+
+    # Try local filesystem first
+    directory = os.path.join("static", "temp_workspace", run_id)
+    local_path = os.path.join(directory, filename)
+    if os.path.exists(local_path):
+        return send_from_directory(directory, filename, as_attachment=True)
+
+    # Fallback: fetch from MongoDB
+    try:
+        from vision_classifier import get_safe_mongodb_uri
+        mongo_uri = get_safe_mongodb_uri(os.environ.get("MONGO_URI"))
+        if mongo_uri:
+            import pymongo, base64
+            client = pymongo.MongoClient(mongo_uri, serverSelectionTimeoutMS=8000)
+            db = client.get_database()
+            doc = db["output_files"].find_one({"run_id": run_id, "filename": filename})
+            client.close()
+            if doc and doc.get("file_b64"):
+                file_bytes = base64.b64decode(doc["file_b64"])
+                os.makedirs(directory, exist_ok=True)
+                with open(local_path, "wb") as f:
+                    f.write(file_bytes)
+                return send_from_directory(directory, filename, as_attachment=True)
+    except Exception as e:
+        print(f"Failed to fetch file from MongoDB: {e}")
+
+    return f"File '{filename}' not found. The server may have restarted.", 404
 
 if __name__ == '__main__':
     # Make sure static directory exists

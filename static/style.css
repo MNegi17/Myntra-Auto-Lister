@@ -876,13 +876,20 @@ input[type=range]::-webkit-slider-thumb {
 /* ========================================================
    TAB 4: TERMINAL VIEW & LIVE LOGGING SCREEN
    ======================================================== */
+/* Outer wrapper so both cards share the same width */
+.terminal-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;  /* flush: no gap between run-card and console */
+}
+
 .run-actions-card {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) var(--border-radius) 0 0; /* round top only */
     padding: 24px;
     box-shadow: var(--card-shadow);
-    margin-bottom: 24px;
+    margin-bottom: 0; /* no gap */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -939,7 +946,8 @@ input[type=range]::-webkit-slider-thumb {
 .console-wrapper {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
+    border-top: none; /* merges flush with run-actions-card above */
+    border-radius: 0 0 var(--border-radius) var(--border-radius); /* round bottom only */
     overflow: hidden;
     display: flex;
     flex-direction: column;
