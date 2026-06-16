@@ -7,6 +7,42 @@ import base64
 KEY_FILE = "gemini_api_key.txt"
 LEARNINGS_FILE = "myntra_vision_learning.json"
 
+# Load environment variables from .env file if it exists
+if os.path.exists(".env"):
+    try:
+        with open(".env", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    k, v = line.split("=", 1)
+                    os.environ[k.strip()] = v.strip()
+    except Exception as e:
+        print(f"Error loading .env file in vision_classifier: {e}")
+
+def get_safe_mongodb_uri(uri):
+    if not uri:
+        return uri
+    prefix = ""
+    for p in ["mongodb+srv://", "mongodb://"]:
+        if uri.startswith(p):
+            prefix = p
+            break
+    if not prefix:
+        return uri
+    remaining = uri[len(prefix):]
+    if "@" not in remaining:
+        return uri
+    creds, host_part = remaining.rsplit("@", 1)
+    if ":" in creds:
+        username, password = creds.split(":", 1)
+        import urllib.parse
+        unquoted_username = urllib.parse.unquote(username)
+        unquoted_password = urllib.parse.unquote(password)
+        quoted_username = urllib.parse.quote_plus(unquoted_username)
+        quoted_password = urllib.parse.quote_plus(unquoted_password)
+        return f"{prefix}{quoted_username}:{quoted_password}@{host_part}"
+    return uri
+
 def file_to_base64_data_url(filepath):
     if not filepath:
         return ""
@@ -48,12 +84,15 @@ def get_api_key():
     return ""
 
 def get_learnings():
-    mongo_uri = os.environ.get("MONGO_URI")
+    mongo_uri = get_safe_mongodb_uri(os.environ.get("MONGO_URI"))
     if mongo_uri:
         try:
             import pymongo
             client = pymongo.MongoClient(mongo_uri)
-            db = client.get_database()
+            try:
+                db = client.get_database()
+            except Exception:
+                db = client['myntra_autolister']
             collection = db.learnings
             learnings = {}
             for doc in collection.find():
@@ -105,12 +144,15 @@ def save_learning(*args, **kwargs):
     front_b64 = file_to_base64_data_url(front)
     back_b64 = file_to_base64_data_url(back)
     
-    mongo_uri = os.environ.get("MONGO_URI")
+    mongo_uri = get_safe_mongodb_uri(os.environ.get("MONGO_URI"))
     if mongo_uri:
         try:
             import pymongo
             client = pymongo.MongoClient(mongo_uri)
-            db = client.get_database()
+            try:
+                db = client.get_database()
+            except Exception:
+                db = client['myntra_autolister']
             collection = db.learnings
             doc = {
                 "vendorArticleNumber": van,
@@ -147,12 +189,15 @@ def save_learning(*args, **kwargs):
         return False
 
 def delete_learning(vendor_article_num):
-    mongo_uri = os.environ.get("MONGO_URI")
+    mongo_uri = get_safe_mongodb_uri(os.environ.get("MONGO_URI"))
     if mongo_uri:
         try:
             import pymongo
             client = pymongo.MongoClient(mongo_uri)
-            db = client.get_database()
+            try:
+                db = client.get_database()
+            except Exception:
+                db = client['myntra_autolister']
             collection = db.learnings
             res = collection.delete_one({"vendorArticleNumber": {"$regex": f"^{vendor_article_num}$", "$options": "i"}})
             client.close()

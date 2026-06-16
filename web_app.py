@@ -20,6 +20,18 @@ except ImportError:
     tk = None
     filedialog = None
 
+# Load environment variables from .env file if it exists
+if os.path.exists(".env"):
+    try:
+        with open(".env", "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    k, v = line.split("=", 1)
+                    os.environ[k.strip()] = v.strip()
+    except Exception as e:
+        print(f"Error loading .env file: {e}")
+
 IS_CLOUD = os.environ.get("IS_CLOUD", "false").lower() == "true" or tk is None or filedialog is None
 
 # Load AI learned offline rules database
@@ -1438,19 +1450,24 @@ def stream_logs():
     q = log_buffer.add_listener()
     
     def event_stream():
-        yield f"data: {json.dumps({'time': datetime.now().strftime('%H:%M:%S'), 'level': 'INFO', 'message': 'Web Terminal Connected'})}\n\n"
-        while True:
-            try:
-                log_entry = q.get(timeout=2.0)
-                yield f"data: {json.dumps(log_entry)}\n\n"
-            except queue.Empty:
-                yield ": heartbeat\n\n"
-            except GeneratorExit:
-                break
-                
-        log_buffer.remove_listener(q)
+        try:
+            yield f"data: {json.dumps({'time': datetime.now().strftime('%H:%M:%S'), 'level': 'INFO', 'message': 'Web Terminal Connected'})}\n\n"
+            while True:
+                try:
+                    log_entry = q.get(timeout=2.0)
+                    yield f"data: {json.dumps(log_entry)}\n\n"
+                except queue.Empty:
+                    yield ": heartbeat\n\n"
+        except GeneratorExit:
+            pass
+        finally:
+            log_buffer.remove_listener(q)
         
-    return Response(event_stream(), mimetype="text/event-stream")
+    response = Response(event_stream(), mimetype="text/event-stream")
+    response.headers['Cache-Control'] = 'no-cache'
+    response.headers['Connection'] = 'keep-alive'
+    response.headers['X-Accel-Buffering'] = 'no'
+    return response
 
 if __name__ == '__main__':
     # Make sure static directory exists
