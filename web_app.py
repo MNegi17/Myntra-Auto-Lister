@@ -989,13 +989,19 @@ def run_automation_core(params, dry_run=False):
                     if 'Fabric' not in sku_data or pd.isna(sku_data['Fabric']) or sku_data['Fabric'] == "":
                         fabric_val, fabric_type_val = parse_fabric_and_type(row, selected_cat)
                         sku_data['Fabric'] = fabric_val
-                        if 'Fabric Type' not in sku_data or pd.isna(sku_data['Fabric Type']) or sku_data['Fabric Type'] == "":
-                            sku_data['Fabric Type'] = fabric_type_val
+                    
+                    sku_data['Fabric Type'] = sku_data.get('Fabric', '')
+                    
+                    # Knit or Woven: Summer -> Knit, Winter -> Woven
+                    if sku_data.get('season') == "Fall-Winter":
+                        sku_data['Knit or Woven'] = "Woven"
+                    else:
+                        sku_data['Knit or Woven'] = "Knit"
                             
                     # User overrides for Apparel
                      # Wash Care, Body or Garment Size, Number of Items, Net Quantity Unit, Net Quantity
-                    if 'Wash Care' not in sku_data or pd.isna(sku_data['Wash Care']) or sku_data['Wash Care'] == "":
-                        sku_data['Wash Care'] = "Hand Wash"
+                    sku_data['Wash Care'] = "Hand Wash"
+                    sku_data['materialCareDescription'] = "Hand Wash"
                     if 'Body or Garment Size' not in sku_data or pd.isna(sku_data['Body or Garment Size']) or sku_data['Body or Garment Size'] == "":
                         sku_data['Body or Garment Size'] = "Garment Measurements in"
                     if 'Number of Items' not in sku_data or pd.isna(sku_data['Number of Items']) or sku_data['Number of Items'] == "":
@@ -1004,6 +1010,8 @@ def run_automation_core(params, dry_run=False):
                         sku_data['Net Quantity Unit'] = "Piece"
                     if 'Net Quantity' not in sku_data or pd.isna(sku_data['Net Quantity']) or sku_data['Net Quantity'] == "":
                         sku_data['Net Quantity'] = 1
+                else:
+                    sku_data['materialCareDescription'] = "Wipe it with a clean dry cloth"
                 
                 if "clothing set" in selected_cat.lower().strip():
                     sku_data['Multipack Set'] = "2"
@@ -1018,6 +1026,10 @@ def run_automation_core(params, dry_run=False):
                     sku_data['Closure'] = get_closest_match(sku_data['Closure'], masterdata_choices['closure'])
                 if 'Fastening' in sku_data and sku_data['Fastening']:
                     sku_data['Fastening'] = get_closest_match(sku_data['Fastening'], masterdata_choices['closure'])
+                
+                # Dresses Closure override
+                if "dress" in selected_cat.lower().strip():
+                    sku_data['Closure'] = "NA"
                     
                 if 'Type' in sku_data and sku_data['Type']:
                     sku_data['Type'] = get_closest_match(sku_data['Type'], masterdata_choices['type'])
