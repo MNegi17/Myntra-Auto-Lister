@@ -265,6 +265,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     // Monitor status on startup in case server was running
     checkTaskStatus();
+    
+    // Restore last download card if available in localStorage
+    const savedRunId = localStorage.getItem('myntra_last_run_id');
+    const savedFilename = localStorage.getItem('myntra_last_filename');
+    if (savedRunId && savedFilename) {
+        setTimeout(() => {
+            const globalStatus = globalStatusText ? globalStatusText.innerText.toLowerCase() : '';
+            const isProgressActive = progressWrapper && progressWrapper.classList.contains('active');
+            if (globalStatus !== 'running' && !isProgressActive) {
+                showDownloadCard(savedRunId, savedFilename);
+            }
+        }, 1000);
+    }
 });
 
 // 2. Theme Switching Logic (Light & Dark)
@@ -625,6 +638,9 @@ async function triggerAutomation(dryRun = false) {
     if (downloadCard) {
         downloadCard.style.display = 'none';
     }
+    // Clear last saved download card info from localStorage
+    localStorage.removeItem('myntra_last_run_id');
+    localStorage.removeItem('myntra_last_filename');
     
     // Toggle Button loadings
     btnGenerate.disabled = true;
@@ -671,8 +687,14 @@ async function checkTaskStatus() {
             btnDryRun.disabled = true;
             progressWrapper.classList.add('active');
             updateProgressBar(data.progress, data.current_step);
+            
+            // Auto-resume status polling on load/refresh if it is running but no interval exists
+            if (!statusInterval) {
+                statusInterval = setInterval(checkTaskStatus, 800);
+            }
         } else if (data.status === 'success') {
             clearInterval(statusInterval);
+            statusInterval = null;
             btnGenerate.disabled = false;
             btnDryRun.disabled = false;
             updateProgressBar(1.0, "Process completed successfully!");
@@ -688,6 +710,7 @@ async function checkTaskStatus() {
             }, 5000);
         } else if (data.status === 'failed') {
             clearInterval(statusInterval);
+            statusInterval = null;
             btnGenerate.disabled = false;
             btnDryRun.disabled = false;
             updateProgressBar(1.0, `Error occurred: ${data.error}`);
@@ -698,6 +721,7 @@ async function checkTaskStatus() {
         } else {
             // Idle state
             clearInterval(statusInterval);
+            statusInterval = null;
             btnGenerate.disabled = false;
             btnDryRun.disabled = false;
         }
@@ -708,8 +732,14 @@ async function checkTaskStatus() {
 
 // 7b. Show download card and store run info
 function showDownloadCard(runId, filename) {
-    lastRunId = runId || '';
-    lastOutputFilename = filename || '';
+    if (!runId || !filename) return;
+    lastRunId = runId;
+    lastOutputFilename = filename;
+    
+    // Store in localStorage so it persists across page reloads and server restarts
+    localStorage.setItem('myntra_last_run_id', runId);
+    localStorage.setItem('myntra_last_filename', filename);
+    
     const downloadCard = document.getElementById('download-action-card');
     const downloadFileNameText = document.getElementById('download-file-name');
     if (downloadCard && downloadFileNameText) {

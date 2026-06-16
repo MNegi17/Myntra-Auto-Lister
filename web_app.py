@@ -1116,7 +1116,10 @@ def run_automation_core(params, dry_run=False):
 
             log_buffer.log("SUCCESS", "=== MYNTRA LISTING GENERATION COMPLETED ===")
             log_buffer.log("SUCCESS", f"Successfully generated {inserted_count} SKUs!")
-            log_buffer.log("SUCCESS", f"File saved: {output_filename}")
+            if IS_CLOUD:
+                log_buffer.log("SUCCESS", "File saved to cloud workspace. Click the 'Download Excel File' button below to download it.")
+            else:
+                log_buffer.log("SUCCESS", f"File saved locally to: {os.path.abspath(output_filepath)}")
             # Emit special download-trigger event picked up by the frontend in real time
             log_buffer.log("__DOWNLOAD__", json.dumps({"run_id": run_id, "filename": output_filename}))
         else:
@@ -1408,9 +1411,8 @@ def run_automation():
     
     run_id = str(int(time.time()))
     if IS_CLOUD:
-        if not output_dir:
-            output_dir = os.path.join("static", "temp_workspace", run_id)
-            os.makedirs(output_dir, exist_ok=True)
+        output_dir = os.path.join("static", "temp_workspace", run_id)
+        os.makedirs(output_dir, exist_ok=True)
             
     if not item_path or not template_path or (not IS_CLOUD and not output_dir):
         return jsonify({"error": "Item Directory and SKU Template are required!" if IS_CLOUD else "Item Directory, SKU Template, and Output Save Folder are required!"}), 400
