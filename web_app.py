@@ -184,7 +184,7 @@ MYNTRA_ARTICLE_TYPES = sorted(list(set([
     "Trousers", "Shorts", "Jeans", "Track Pants", "Joggers", "Leggings", "Jeggings", "Capris", "Palazzos", 
     "Skirts", "Salwars", "Churidars", "Patialas", "Harem Pants", "Cargo Pants", "Tights", "Stockings",
     "Casual Shoes", "Sports Shoes", "Formal Shoes", "Sneakers", "Loafers", "Boots", "Sandals", "Slippers", 
-    "Flip Flops", "Heels", "Flats", "Wedges", "Espadrilles", "Mules", "Clogs", "School Shoes",
+    "Flip Flops", "Heels", "Flats", "Wedges", "Espadrilles", "Mules", "Clogs", "School Shoes", "Ballerina", "Ballerinas",
     "Bras", "Briefs", "Trunks", "Boxers", "Camisoles", "Vests", "Thermal Tops", "Thermal Bottoms", 
     "Nightdress", "Nightsuits", "Bathrobes", "Pyjamas", "Shapewear", "Swimwear", "Board Shorts",
     "Lehenga Cholis", "Sarees", "Blouses", "Dupattas", "Kurtis", "Dhotis", "Gowns", "Anarkalis",
@@ -471,7 +471,7 @@ def run_automation_core(params, dry_run=False):
                 log_buffer.log("WARNING", f"Failed to load sizechart mappings file: {str(e)}")
         
         FOOTWEAR_CATEGORIES = [
-            "ballerinas", "casual shoes", "sports shoes", "formal shoes", "sneakers", "loafers", "boots", 
+            "ballerinas", "ballerina", "casual shoes", "sports shoes", "formal shoes", "sneakers", "loafers", "boots", 
             "sandals", "slippers", "flip flops", "heels", "flats", "wedges", "espadrilles", "mules", "clogs"
         ]
         is_footwear = selected_cat.lower().strip() in FOOTWEAR_CATEGORIES
@@ -480,6 +480,7 @@ def run_automation_core(params, dry_run=False):
             log_buffer.log("INFO", f"Footwear category identified ('{selected_cat}'). Applying brand 'toothless' and Footwear defaults...")
             fabric_static_db = rules_db.get("footwear_defaults", {})
             sizing_measurements_db = rules_db.get("footwear_sizecharts", {}).get("FOOTWEAR", {})
+            sizechart_cat = "FOOTWEAR"
             log_buffer.log("SUCCESS", f"Loaded {len(sizing_measurements_db)} footwear sizes from learning model.")
         else:
             log_buffer.log("INFO", f"Apparel category identified ('{selected_cat}'). Applying brand 'Purple United Kids' and Apparel defaults...")
@@ -576,7 +577,7 @@ def run_automation_core(params, dry_run=False):
                 # Define signatures
                 season_sigs = {'summer', 'winter', 'spring', 'fall', 'spring-summer', 'fall-winter', 'autumn'}
                 closure_sigs = {'tie-ups', 'zip', 'button', 'hook and eye', 'lace-ups', 'buckle', 'velcro', 'slip-on', 'backstrap', 'drawstring', 'elasticated'}
-                type_sigs = {'regular', 'casual', 't-shirt', 'shirt', 'dress', 'trousers', 'shorts', 'blouson', 'wrap', 'boxy', 'peplum', 'a-line', 'mules', 'ballerinas', 'sneakers'}
+                type_sigs = {'regular', 'casual', 't-shirt', 'shirt', 'dress', 'trousers', 'shorts', 'blouson', 'wrap', 'boxy', 'peplum', 'a-line', 'mules', 'ballerinas', 'ballerina', 'sneakers'}
                 
                 # Scan each column in masterdata sheet
                 for col_idx in range(1, m_sheet.max_column + 1):
@@ -881,7 +882,10 @@ def run_automation_core(params, dry_run=False):
                     sku_data['season'] = "Spring-Summer"
                 
                 # Normalized offline size database lookup with dynamic column mapping
-                norm_size = normalize_size_label(item_size)
+                if is_footwear:
+                    norm_size = str(item_size).strip().upper()
+                else:
+                    norm_size = normalize_size_label(item_size)
                 
                 # Resolve custom sizechart mapping entry
                 selected_entry = None

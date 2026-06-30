@@ -6,7 +6,15 @@
     },
     "footwear_defaults": {
         "Manufacturer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041.",
-        "Packer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041."
+        "Packer Name and Address with Pincode": "Purple United Sales Limited, Khasra No. 55/14 & 55/15, Mundka, Near Rani Khera Road, New Delhi, West Delhi, Delhi 110041.",
+        "Country Of Origin": "India",
+        "FashionType": "Fashion",
+        "Material": "Synthetic Leather",
+        "Toe Shape": "Round Toe",
+        "Net Quantity Unit": "Piece",
+        "Net Quantity": 1,
+        "materialCareDescription": "Wipe with a clean, dry cloth to remove the dust",
+        "brand": "toothless"
     },
     "apparel_sizecharts": {
         "BOYS T-SHIRT": {
@@ -1266,5 +1274,50 @@
             }
         }
     },
-    "footwear_sizecharts": {}
+    "footwear_sizecharts": {
+        "FOOTWEAR": {
+            "11": {
+                "EURO Size": "29",
+                "Kids Age-Group": "5-5.5Y",
+                "UK Size": "11",
+                "US Size": "12",
+                "To Fit Foot Length ( cm )": "19.1"
+            },
+            "12": {
+                "EURO Size": "30",
+                "Kids Age-Group": "5.5-6Y",
+                "UK Size": "12",
+                "US Size": "13",
+                "To Fit Foot Length ( cm )": "19.8"
+            },
+            "13": {
+                "EURO Size": "31",
+                "Kids Age-Group": "6-6.5Y",
+                "UK Size": "13",
+                "US Size": "1",
+                "To Fit Foot Length ( cm )": "20.4"
+            },
+            "1": {
+                "EURO Size": "32",
+                "Kids Age-Group": "6.5-7Y",
+                "UK Size": "1",
+                "US Size": "2",
+                "To Fit Foot Length ( cm )": "21.1"
+            },
+            "2": {
+                "EURO Size": "33",
+                "Kids Age-Group": "7-8Y",
+                "UK Size": "2",
+                "US Size": "3",
+                "To Fit Foot Length ( cm )": "21.8"
+            },
+            "3": {
+                "EURO Size": "34",
+                "Kids Age-Group": "8-9Y",
+                "UK Size": "3",
+                "US Size": "4",
+                "To Fit Foot Length ( cm )": "22.4"
+            }
+        }
+    }
 }

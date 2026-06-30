@@ -4,7 +4,7 @@ import pandas as pd
 import openpyxl
 
 learning_dir = r"C:\Users\Manann\Downloads"
-ballerinas_file = os.path.join(learning_dir, "Myntra-Sku-Template-2026-04-21_Ballerinas.xlsx")
+ballerinas_file = r"C:\Users\Manann\Downloads\Myntra_Listing-Sheets(11-03-26)\Myntra-Sku-Template-2026-03-11_Ballerinas.xlsx"
 top_file = os.path.join(learning_dir, "Myntra-Sku-Template-2026-05-05-Tops.xlsx")
 sizechart_file = os.path.join(learning_dir, "Size Chart (4).xlsx")
 
@@ -115,7 +115,7 @@ if os.path.exists(ballerinas_file):
                 # We save Footwear Sizecharts under BALLERINAS / FOOTWEAR
                 rules_db["footwear_sizecharts"]["FOOTWEAR"] = {}
                 for idx, row in data_df.iterrows():
-                    sz = normalize_size_label(row[size_col])
+                    sz = str(row[size_col]).strip().upper()
                     if pd.notna(sz) and sz != 'nan' and sz not in rules_db["footwear_sizecharts"]["FOOTWEAR"]:
                         rules_db["footwear_sizecharts"]["FOOTWEAR"][sz] = {}
                         for col in measurement_cols:

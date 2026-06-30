@@ -493,5 +493,33 @@
       "INSEAM LENGTH": "Inseam Length ( Inches )",
       "To Fit Waist  (all round)": "To Fit Waist ( Inches )"
     }
+  },
+  "Ballerinas": {
+    "sizechart_category": {
+      "GIRLS": "FOOTWEAR",
+      "BOYS": "FOOTWEAR",
+      "DEFAULT": "FOOTWEAR"
+    },
+    "mappings": {
+      "EURO Size": "EURO Size",
+      "UK Size": "UK Size",
+      "US Size": "US Size",
+      "Kids Age-Group": "Kids Age-Group",
+      "To Fit Foot Length ( cm )": "To Fit Foot Length ( cm )"
+    }
+  },
+  "Ballerina": {
+    "sizechart_category": {
+      "GIRLS": "FOOTWEAR",
+      "BOYS": "FOOTWEAR",
+      "DEFAULT": "FOOTWEAR"
+    },
+    "mappings": {
+      "EURO Size": "EURO Size",
+      "UK Size": "UK Size",
+      "US Size": "US Size",
+      "Kids Age-Group": "Kids Age-Group",
+      "To Fit Foot Length ( cm )": "To Fit Foot Length ( cm )"
+    }
   }
 }
