@@ -458,6 +458,7 @@ def run_automation_core(params, dry_run=False):
         # 4. Reconcile rules, brand rules, and sizing charts dynamically from myntra_rules_db.json
         sizing_measurements_db = {}
         fabric_static_db = {}
+        apparel_charts = rules_db.get("apparel_sizecharts", {})
         
         # Load user-editable sizechart mappings database dynamically on run
         sizechart_mappings = {}
