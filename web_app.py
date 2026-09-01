@@ -174,6 +174,28 @@ CATEGORY_DEFAULTS = {
         "Package Contains": "1 Romper",
         "Type": "Romper",
         "Length": "Short"
+    },
+    "baby apparel gift set": {
+        "Package Contains": "1 Baby Apparel Gift Set",
+        "Type": "Baby Apparel Gift Set",
+        "Length": "Regular"
+    },
+    "baby apparel gift sets": {
+        "Package Contains": "1 Baby Apparel Gift Set",
+        "Type": "Baby Apparel Gift Set",
+        "Length": "Regular"
+    },
+    "booties": {
+        "Package Contains": "1 Pair of Booties",
+        "Type": "Booties",
+        "Toe Shape": "Round Toe",
+        "Material": "Synthetic Leather"
+    },
+    "bootie": {
+        "Package Contains": "1 Pair of Booties",
+        "Type": "Booties",
+        "Toe Shape": "Round Toe",
+        "Material": "Synthetic Leather"
     }
 }
 
@@ -185,6 +207,7 @@ MYNTRA_ARTICLE_TYPES = sorted(list(set([
     "Skirts", "Salwars", "Churidars", "Patialas", "Harem Pants", "Cargo Pants", "Tights", "Stockings",
     "Casual Shoes", "Sports Shoes", "Formal Shoes", "Sneakers", "Loafers", "Boots", "Sandals", "Slippers", 
     "Flip Flops", "Heels", "Flats", "Wedges", "Espadrilles", "Mules", "Clogs", "School Shoes", "Ballerina", "Ballerinas",
+    "Booties", "Bootie",
     "Bras", "Briefs", "Trunks", "Boxers", "Camisoles", "Vests", "Thermal Tops", "Thermal Bottoms", 
     "Nightdress", "Nightsuits", "Bathrobes", "Pyjamas", "Shapewear", "Swimwear", "Board Shorts",
     "Lehenga Cholis", "Sarees", "Blouses", "Dupattas", "Kurtis", "Dhotis", "Gowns", "Anarkalis",
@@ -199,8 +222,13 @@ MYNTRA_ARTICLE_TYPES = sorted(list(set([
     "Eye Shadow", "Compact", "Blush", "Kajal", "Concealer", "Primer", "Makeup Brushes", "Hair Dryer", 
     "Hair Straightener", "Trimmers", "Shavers", "Epilators", "Face Wash", "Moisturizer", "Sunscreen", 
     "Shampoo", "Conditioner", "Hair Oil", "Body Wash", "Soap", "Body Lotion",
-    "Clothing Set", "Clothing Sets"
+    "Clothing Set", "Clothing Sets", "Baby Apparel Gift Set", "Baby Apparel Gift Sets"
 ])))
+
+FOOTWEAR_CATEGORIES = [
+    "booties", "bootie", "ballerinas", "ballerina", "casual shoes", "sports shoes", "formal shoes", "sneakers", "loafers", "boots", 
+    "sandals", "slippers", "flip flops", "heels", "flats", "wedges", "espadrilles", "mules", "clogs"
+]
 
 def get_singular_category(category_name):
     cat_lower = category_name.lower().strip()
@@ -472,7 +500,7 @@ def run_automation_core(params, dry_run=False):
                 log_buffer.log("WARNING", f"Failed to load sizechart mappings file: {str(e)}")
         
         FOOTWEAR_CATEGORIES = [
-            "ballerinas", "ballerina", "casual shoes", "sports shoes", "formal shoes", "sneakers", "loafers", "boots", 
+            "booties", "bootie", "ballerinas", "ballerina", "casual shoes", "sports shoes", "formal shoes", "sneakers", "loafers", "boots", 
             "sandals", "slippers", "flip flops", "heels", "flats", "wedges", "espadrilles", "mules", "clogs"
         ]
         is_footwear = selected_cat.lower().strip() in FOOTWEAR_CATEGORIES
@@ -480,9 +508,26 @@ def run_automation_core(params, dry_run=False):
         if is_footwear:
             log_buffer.log("INFO", f"Footwear category identified ('{selected_cat}'). Applying brand 'toothless' and Footwear defaults...")
             fabric_static_db = rules_db.get("footwear_defaults", {})
-            sizing_measurements_db = rules_db.get("footwear_sizecharts", {}).get("FOOTWEAR", {})
-            sizechart_cat = "FOOTWEAR"
-            log_buffer.log("SUCCESS", f"Loaded {len(sizing_measurements_db)} footwear sizes from learning model.")
+            footwear_charts = rules_db.get("footwear_sizecharts", {})
+            
+            # Map selected_cat to sizechart_category from mappings JSON
+            mapped_sizechart_cat = None
+            for key_cat, val_cat in sizechart_mappings.items():
+                if key_cat.lower().strip() == selected_cat.lower().strip():
+                    mapped_sizechart_cat = val_cat.get("sizechart_category")
+                    break
+            
+            if isinstance(mapped_sizechart_cat, dict):
+                sizechart_cat = mapped_sizechart_cat.get("DEFAULT", "FOOTWEAR")
+            elif isinstance(mapped_sizechart_cat, str):
+                sizechart_cat = mapped_sizechart_cat
+            elif "bootie" in selected_cat.lower():
+                sizechart_cat = "BOOTIES"
+            else:
+                sizechart_cat = "FOOTWEAR"
+            
+            sizing_measurements_db = footwear_charts.get(sizechart_cat, footwear_charts.get("FOOTWEAR", {}))
+            log_buffer.log("SUCCESS", f"Loaded '{sizechart_cat}' size chart containing {len(sizing_measurements_db)} footwear sizes from learning model.")
         else:
             log_buffer.log("INFO", f"Apparel category identified ('{selected_cat}'). Applying brand 'Purple United Kids' and Apparel defaults...")
             fabric_static_db = rules_db.get("apparel_defaults", {})
@@ -857,18 +902,25 @@ def run_automation_core(params, dry_run=False):
                 gender = str(row.get('GENDER', '')).strip().upper()
                 age_group = str(row.get('AGE GROUP', '')).strip().upper()
                 
-                if 'GIRL' in gender and 'KID' in age_group:
-                    sku_data['AgeGroup'] = "Kids-Girls"
-                elif 'BOY' in gender and 'KID' in age_group:
-                    sku_data['AgeGroup'] = "Kids-Boys"
-                elif 'GIRL' in gender:
-                    sku_data['AgeGroup'] = "Girls"
-                elif 'BOY' in gender:
-                    sku_data['AgeGroup'] = "Boys"
-                elif 'WOMEN' in gender or 'FEMALE' in gender:
-                    sku_data['AgeGroup'] = "Women"
+                # Check if product is for Infants or Booties (Booties are strictly for Infants)
+                is_infant_item = "bootie" in selected_cat.lower() or "infant" in age_group.lower() or "baby" in age_group.lower() or "kid" in age_group.lower()
+                
+                if is_infant_item or "bootie" in selected_cat.lower():
+                    if 'GIRL' in gender or 'FEMALE' in gender:
+                        sku_data['AgeGroup'] = "Kids-Girls"
+                    elif 'BOY' in gender or 'MALE' in gender:
+                        sku_data['AgeGroup'] = "Kids-Boys"
+                    else:
+                        sku_data['AgeGroup'] = "Kids-Unisex"
                 else:
-                    sku_data['AgeGroup'] = "Men"
+                    if 'GIRL' in gender:
+                        sku_data['AgeGroup'] = "Girls"
+                    elif 'BOY' in gender:
+                        sku_data['AgeGroup'] = "Boys"
+                    elif 'WOMEN' in gender or 'FEMALE' in gender:
+                        sku_data['AgeGroup'] = "Women"
+                    else:
+                        sku_data['AgeGroup'] = "Men"
                     
                 sku_data['articleType'] = target_sheet_name
                 sku_data['FashionType'] = "Fashion"
@@ -897,6 +949,10 @@ def run_automation_core(params, dry_run=False):
                         selected_mappings = cat_v.get("mappings", {})
                         break
                 
+                # Combined size charts for dynamic lookup across apparel and footwear
+                footwear_charts = rules_db.get("footwear_sizecharts", {})
+                all_sizecharts = {**apparel_charts, **footwear_charts}
+                
                 # Resolve the sizechart category dynamically based on gender
                 resolved_measurements = None
                 resolved_chart_name = None
@@ -905,7 +961,7 @@ def run_automation_core(params, dry_run=False):
                     sizechart_cat_config = selected_entry.get("sizechart_category")
                     if isinstance(sizechart_cat_config, dict):
                         # Determine preferred and fallback categories
-                        preferred_gender = "GIRLS" if "GIRL" in gender else ("BOYS" if "BOY" in gender else "DEFAULT")
+                        preferred_gender = "GIRLS" if ("GIRL" in gender or "FEMALE" in gender) else ("BOYS" if ("BOY" in gender or "MALE" in gender) else "DEFAULT")
                         fallback_gender = "BOYS" if preferred_gender == "GIRLS" else ("GIRLS" if preferred_gender == "BOYS" else None)
                         
                         preferred_chart = sizechart_cat_config.get(preferred_gender)
@@ -919,29 +975,29 @@ def run_automation_core(params, dry_run=False):
                             default_chart = default_chart.upper().strip()
                         
                         # 1. Try preferred gender
-                        if preferred_chart and preferred_chart in apparel_charts:
-                            if norm_size in apparel_charts[preferred_chart]:
-                                resolved_measurements = apparel_charts[preferred_chart][norm_size]
+                        if preferred_chart and preferred_chart in all_sizecharts:
+                            if norm_size in all_sizecharts[preferred_chart]:
+                                resolved_measurements = all_sizecharts[preferred_chart][norm_size]
                                 resolved_chart_name = preferred_chart
                                 
                         # 2. Try fallback gender (opposite)
-                        if not resolved_measurements and fallback_chart and fallback_chart in apparel_charts:
-                            if norm_size in apparel_charts[fallback_chart]:
-                                resolved_measurements = apparel_charts[fallback_chart][norm_size]
+                        if not resolved_measurements and fallback_chart and fallback_chart in all_sizecharts:
+                            if norm_size in all_sizecharts[fallback_chart]:
+                                resolved_measurements = all_sizecharts[fallback_chart][norm_size]
                                 resolved_chart_name = fallback_chart
                                 
                         # 3. Try default
-                        if not resolved_measurements and default_chart and default_chart in apparel_charts:
-                            if norm_size in apparel_charts[default_chart]:
-                                resolved_measurements = apparel_charts[default_chart][norm_size]
+                        if not resolved_measurements and default_chart and default_chart in all_sizecharts:
+                            if norm_size in all_sizecharts[default_chart]:
+                                resolved_measurements = all_sizecharts[default_chart][norm_size]
                                 resolved_chart_name = default_chart
                                 
                     elif isinstance(sizechart_cat_config, str):
                         # Simple string mapping
                         chart_upper = sizechart_cat_config.upper().strip()
-                        if chart_upper in apparel_charts:
-                            if norm_size in apparel_charts[chart_upper]:
-                                resolved_measurements = apparel_charts[chart_upper][norm_size]
+                        if chart_upper in all_sizecharts:
+                            if norm_size in all_sizecharts[chart_upper]:
+                                resolved_measurements = all_sizecharts[chart_upper][norm_size]
                                 resolved_chart_name = chart_upper
                                 
                 # If not resolved via mappings, fall back to global sizing_measurements_db

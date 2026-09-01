@@ -230,6 +230,114 @@ rules_db["apparel_sizecharts"]["JEANS"] = {
     }
 }
 
+# 7. Inject custom BOOTIES size charts (Infants only)
+rules_db["footwear_sizecharts"]["BOOTIES"] = {
+    "1": {
+        "EURO Size": "16",
+        "UK Size": "1",
+        "US Size": "2",
+        "Kids Age-Group": "0-6M",
+        "To Fit Foot Length ( cm )": "11.0",
+        "Insole Length": "11.0"
+    },
+    "2": {
+        "EURO Size": "17",
+        "UK Size": "2",
+        "US Size": "3",
+        "Kids Age-Group": "6-9M",
+        "To Fit Foot Length ( cm )": "11.7",
+        "Insole Length": "11.7"
+    },
+    "3": {
+        "EURO Size": "18",
+        "UK Size": "3",
+        "US Size": "4",
+        "Kids Age-Group": "9-12M",
+        "To Fit Foot Length ( cm )": "12.2",
+        "Insole Length": "12.2"
+    },
+    "4": {
+        "EURO Size": "19",
+        "UK Size": "4",
+        "US Size": "5",
+        "Kids Age-Group": "12-18M",
+        "To Fit Foot Length ( cm )": "12.6",
+        "Insole Length": "12.6"
+    },
+    "5": {
+        "EURO Size": "20",
+        "UK Size": "5",
+        "US Size": "6",
+        "Kids Age-Group": "18-24M",
+        "To Fit Foot Length ( cm )": "13.2",
+        "Insole Length": "13.2"
+    },
+    "0-3M": {
+        "EURO Size": "15",
+        "UK Size": "0",
+        "US Size": "1",
+        "Kids Age-Group": "0-3M",
+        "To Fit Foot Length ( cm )": "10.5",
+        "Insole Length": "10.5"
+    },
+    "3-6M": {
+        "EURO Size": "16",
+        "UK Size": "1",
+        "US Size": "2",
+        "Kids Age-Group": "3-6M",
+        "To Fit Foot Length ( cm )": "11.0",
+        "Insole Length": "11.0"
+    },
+    "0-6M": {
+        "EURO Size": "16",
+        "UK Size": "1",
+        "US Size": "2",
+        "Kids Age-Group": "0-6M",
+        "To Fit Foot Length ( cm )": "11.0",
+        "Insole Length": "11.0"
+    },
+    "6-9M": {
+        "EURO Size": "17",
+        "UK Size": "2",
+        "US Size": "3",
+        "Kids Age-Group": "6-9M",
+        "To Fit Foot Length ( cm )": "11.7",
+        "Insole Length": "11.7"
+    },
+    "9-12M": {
+        "EURO Size": "18",
+        "UK Size": "3",
+        "US Size": "4",
+        "Kids Age-Group": "9-12M",
+        "To Fit Foot Length ( cm )": "12.2",
+        "Insole Length": "12.2"
+    },
+    "6-12M": {
+        "EURO Size": "18",
+        "UK Size": "3",
+        "US Size": "4",
+        "Kids Age-Group": "6-12M",
+        "To Fit Foot Length ( cm )": "12.2",
+        "Insole Length": "12.2"
+    },
+    "12-18M": {
+        "EURO Size": "19",
+        "UK Size": "4",
+        "US Size": "5",
+        "Kids Age-Group": "12-18M",
+        "To Fit Foot Length ( cm )": "12.6",
+        "Insole Length": "12.6"
+    },
+    "18-24M": {
+        "EURO Size": "20",
+        "UK Size": "5",
+        "US Size": "6",
+        "Kids Age-Group": "18-24M",
+        "To Fit Foot Length ( cm )": "13.2",
+        "Insole Length": "13.2"
+    }
+}
+
 # Write workspace JSON rules model database
 output_paths = [
     "myntra_rules_db.json",

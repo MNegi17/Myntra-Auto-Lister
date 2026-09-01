@@ -521,5 +521,69 @@
       "Kids Age-Group": "Kids Age-Group",
       "To Fit Foot Length ( cm )": "To Fit Foot Length ( cm )"
     }
+  },
+  "Booties": {
+    "sizechart_category": {
+      "GIRLS": "BOOTIES",
+      "BOYS": "BOOTIES",
+      "DEFAULT": "BOOTIES"
+    },
+    "mappings": {
+      "EURO Size": "EURO Size",
+      "UK Size": "UK Size",
+      "US Size": "US Size",
+      "Kids Age-Group": "Kids Age-Group",
+      "To Fit Foot Length ( cm )": "To Fit Foot Length ( cm )",
+      "Insole Length": "To Fit Foot Length ( cm )"
+    }
+  },
+  "Bootie": {
+    "sizechart_category": {
+      "GIRLS": "BOOTIES",
+      "BOYS": "BOOTIES",
+      "DEFAULT": "BOOTIES"
+    },
+    "mappings": {
+      "EURO Size": "EURO Size",
+      "UK Size": "UK Size",
+      "US Size": "US Size",
+      "Kids Age-Group": "Kids Age-Group",
+      "To Fit Foot Length ( cm )": "To Fit Foot Length ( cm )",
+      "Insole Length": "To Fit Foot Length ( cm )"
+    }
+  },
+  "Baby Apparel Gift Set": {
+    "sizechart_category": {
+      "GIRLS": "CLOTHING SET",
+      "BOYS": "CLOTHING SET",
+      "DEFAULT": "CLOTHING SET"
+    },
+    "mappings": {
+      "TOTAL LENGTH  (UPPER BODY WEAR)": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST  ": "Chest ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "WAIST ( LOWER BODY WEAR )": "To Fit Waist ( Inches )",
+      "LENGTH (LOWER WEAR )": "Outseam Length ( Inches )",
+      "Outseam Length (all round)": "Outseam Length ( Inches )"
+    }
+  },
+  "Baby Apparel Gift Sets": {
+    "sizechart_category": {
+      "GIRLS": "CLOTHING SET",
+      "BOYS": "CLOTHING SET",
+      "DEFAULT": "CLOTHING SET"
+    },
+    "mappings": {
+      "TOTAL LENGTH  (UPPER BODY WEAR)": "Front Length ( Inches )",
+      "Front Length": "Front Length ( Inches )",
+      "HALF CHEST  ": "Chest ( Inches )",
+      "HALF CHEST": "Chest ( Inches )",
+      "Chest (all round)": "Chest ( Inches )",
+      "WAIST ( LOWER BODY WEAR )": "To Fit Waist ( Inches )",
+      "LENGTH (LOWER WEAR )": "Outseam Length ( Inches )",
+      "Outseam Length (all round)": "Outseam Length ( Inches )"
+    }
   }
 }
